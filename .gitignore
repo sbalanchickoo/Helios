@@ -12,8 +12,8 @@
 #*.params
 
 # Virtual environments
-venvs/*
-!notes.md
+venvs/
+!venvs/notes/*
 
 # SQL Server files
 *.mdf
