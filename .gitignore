@@ -14,6 +14,7 @@
 # Virtual environments
 venvs/
 !venvs/notes/*
+workspace.xml
 
 # SQL Server files
 *.mdf
