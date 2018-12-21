@@ -1,5 +1,6 @@
 from flask import Flask, render_template, url_for
 
+# Main application constructor
 app = Flask(__name__)
 
 
@@ -22,6 +23,7 @@ def page_not_found(e):
 @app.errorhandler(500)
 def server_error(e):
     return render_template('500.html'), 500
+
 
 if __name__ == "__main__":
     app.run(debug=False)
