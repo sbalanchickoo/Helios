@@ -12,6 +12,7 @@
 #*.params
 
 # Virtual environments
+.virtualenvs/
 venvs/
 !venvs/notes/*
 workspace.xml
