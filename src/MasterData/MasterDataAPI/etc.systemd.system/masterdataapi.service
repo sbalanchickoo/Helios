@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI instance to serve usstates
+After=network.target
+
+[Service]
+User=sb
+Group=www-data
+WorkingDirectory=/home/sb/Projects/Helios/src/MasterData/MasterDataAPI
+Environment="PATH=/home/sb/.virtualenvs/usstates/bin"
+ExecStart=/home/sb/.virtualenvs/usstates/bin/uwsgi --ini masterdataapi.ini
+
+[Install]
+WantedBy=multi-user.target

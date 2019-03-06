@@ -1,0 +1,9 @@
+server {
+    listen 80;
+    server_name usstates.com;
+
+    location / {
+        include uwsgi_params;
+        uwsgi_pass unix:/home/sb/Projects/Helios/src/MasterData/MasterDataAPI/masterdataapi.sock;
+    }
+}
