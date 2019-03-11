@@ -1,10 +1,15 @@
-from flask import Flask, jsonify
+from flask import Flask
 from config import Config, db
-from views.dataretrieve import get_country, get_state
+from views.dataretrieve import get_state, get_country
 
 app = Flask(__name__)
 app.config.from_object(Config)
 db.init_app(app)
+
+
+@app.route("/")
+def index():
+    return "Hello world 13!"
 
 
 @app.route("/state")
@@ -18,4 +23,4 @@ def country():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', debug=True)
