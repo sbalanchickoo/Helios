@@ -8,4 +8,13 @@ PyMySQL==0.9.3
 SQLAlchemy==1.2.18
 Werkzeug==0.14.1
 cryptography==2.6.1
-passlib
+asn1crypto==0.24.0
+bcrypt==3.1.6
+cffi==1.12.2
+Flask-Bcrypt==0.7.1
+Flask-JWT-Extended==3.18.0
+passlib==1.7.1
+pycparser==2.19
+PyJWT==1.7.1
+six==1.12.0
+
