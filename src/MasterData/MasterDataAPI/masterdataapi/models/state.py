@@ -1,7 +1,7 @@
-from config import db
+from run import db
 
 
-class USState(db.Model):
+class State(db.Model):
     __tablename__ = 'State'
     id = db.Column(db.Integer, primary_key = True)
     abbrev = db.Column(db.String(2))
@@ -16,3 +16,5 @@ class USState(db.Model):
             'abbrev': self.abbrev,
             'fullname': self.state
         }
+
+

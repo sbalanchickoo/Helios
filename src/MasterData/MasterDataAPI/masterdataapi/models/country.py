@@ -1,18 +1,29 @@
-from config import db
+from run import db
 
 
 class Country(db.Model):
     __tablename__ = 'Country'
     id = db.Column(db.Integer, primary_key = True)
-    currencycode = db.Column('currcode', db.String(3))
-    countryname = db.Column('country', db.String(128))
+    currency_code = db.Column('currcode', db.String(3))
+    country_name = db.Column('country', db.String(128))
 
     def __repr__(self):
-        return 'Currency Code: {}; Country: {}'.format(self.currencycode, self.countryname)
+        return 'Currency Code: {}; Country: {}'.format(self.currency_code, self.country_name)
 
     @property
     def serialize(self):
         return {
-            'currency_code': self.currencycode,
-            'country_name': self.countryname
+            'id':self.id,
+            'currency_code': self.currency_code,
+            'country_name': self.country_name
         }
+
+    def add_country(new_country):
+        db.session.add(new_country)
+        db.session.commit()
+        return 1
+
+    def update_country_name(old_name, new_name):
+        Country.query.filter_by(country_name = old_name).update({'country_name':new_name})
+        db.session.commit()
+        return 1
