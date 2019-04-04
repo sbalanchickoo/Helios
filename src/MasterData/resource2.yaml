@@ -1,0 +1,79 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dbservice
+spec:
+  ports:
+  - port: 3306
+  selector:
+    app: db
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql
+spec:
+  selector:
+    matchLabels:
+      app: db 
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: db
+    spec:
+      containers:
+      - name: mysql
+        image: shribee/db:latest
+        ports:
+        - containerPort: 3306
+        # env:
+        # - name: MYSQL_ROOT_PASSWORD # use only for debugging
+        #   value: "sb"
+        # - name: MYSQL_DATABASE
+        #   value: "MasterData"
+        livenessProbe:
+          exec:
+            command: ["mysqladmin", "ping"]
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          timeoutSeconds: 5
+        readinessProbe:
+          exec:
+            # Check we can execute queries over TCP (skip-networking is off).
+            # command: ["mysqladmin", "ping"]
+            command: ["mysql", "-h", "127.0.0.1", "-psb", "-e", "SELECT 1"]
+          initialDelaySeconds: 5
+          periodSeconds: 2
+          timeoutSeconds: 1
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-deployment
+  labels:
+    app: api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api
+  template:
+    metadata:
+      labels:
+        app: api
+    spec:
+      containers:
+      - name: api
+        image: shribee/api:latest
+        ports:
+        - containerPort: 80
+          hostPort: 38081
+        env:
+        - name: DATABASE_URL
+          value: "mysql+pymysql://root:sb@dbservice/MasterData"
+      initContainers:
+      - name: init-mysql
+        image: busybox
+        command: ['sh', '-c', 'until nslookup dbservice; do echo waiting for mysql; sleep 2; done;']
+

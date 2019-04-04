@@ -1,0 +1,42 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata: 
+labels: 
+service: authenticate-service # Name of the service
+name: authenticate-deployment #Deployment Name
+namespace: production-cloud #Namespace Name 
+spec: 
+template: 
+metadata: 
+labels: 
+name: authenticate-selector #Name of selector
+spec: 
+containers: 
+- 
+command: ["/bin/sh","-c"]
+args: ["python run.py"]
+env: 
+- 
+name: DB_HOST
+value: "dbservice.default.svc.cluster.local:3306"
+- 
+name: DB_USER
+value: admin
+- 
+name: DB_PASS
+value: admin
+image: jakirpatel/authenticate
+name: authservice-container
+ports: 
+- 
+name: auth-port
+containerPort: 5010
+protocol: TCP
+resources: 
+limits: 
+cpu: 500m
+memory: 256Mi
+requests: 
+cpu: 250m
+memory: 128Mi
+workingDir: /build/authenticate_service

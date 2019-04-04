@@ -1,6 +1,6 @@
 from masterdataapi import app
 from flask import make_response, jsonify, request
-from views.dataretrieve import *
+from views.data_retrieve import *
 from views.dataupsert import *
 from flask_jwt_extended import create_access_token, create_refresh_token, jwt_required, jwt_refresh_token_required, get_jwt_identity, get_raw_jwt
 
@@ -50,35 +50,36 @@ def create_user():
                     return make_response(jsonify({'message': 'Something went wrong'}), 500)
 
 
-@app.route("/masterdata/api/v1/user", methods=['GET'])
+@app.route("/masterdata/api/v1/login", methods=['GET'])
 def return_user():
     if not request.json \
             or not 'email' in request.json \
             or not 'password' in request.json:
         return make_response(jsonify({'error': 'Invalid input'}), 404)
     else:
-        user = {
-            'email': request.json['email'],
-            'password': request.json['password']
-        }
-        result = get_user_by_email_password(user)
+        result = get_user_by_email_password(request.json['email'], request.json['password'])
         if result == -1:
-            return make_response(jsonify({'error': 'User not found'}), 404)
+            return make_response(jsonify({'error': 'User email or password not found'}), 404)
+        elif result == -2:
+            return make_response(jsonify({'error': 'User email or password not found'}), 404)
+        elif result == -3:
+            return make_response(jsonify({'error': 'User email or password not found'}), 404)
         else:
-            users = get_user_by_email_password(user)
-            user = [c for c in users if c['email'].lower() == request.json['email'].lower()]
-            if user == 0:
-                return make_response(jsonify({'error': 'Not found'}), 404)
-            # return jsonify({'user': user[0]}), 201
-            else:
-                try:
-                    access_token = create_access_token(identity=user['email'])
-                    refresh_token = create_refresh_token(identity=user['email'])
-                    return jsonify({
-                        'user': user[0],
-                        'message': 'User {} was found'.format(user['email']),
-                        'access_token': access_token,
-                        'refresh_token': refresh_token
-                    }), 201
-                except:
-                    return {'message': 'Something went wrong'}, 500
+            try:
+                access_token = create_access_token(identity=result)
+                refresh_token = create_refresh_token(identity=result)
+                return jsonify({
+                    'user': result,
+                    'message': 'User {} was found'.format(result['email']),
+                    'access_token': access_token,
+                    'refresh_token': refresh_token
+                }), 201
+            except:
+                return make_response(jsonify({'message': 'Something went wrong'}), 500)
+
+
+@jwt_refresh_token_required
+def post(self):
+    current_user = get_jwt_identity()
+    access_token = create_access_token(identity = current_user)
+    return {'access_token': access_token}

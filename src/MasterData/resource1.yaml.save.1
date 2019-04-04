@@ -1,0 +1,42 @@
+shribee/db:latest
+
+
+
+
+
+
+
+
+
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-deployment
+  labels:
+    app: masterdata
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: masterdata
+  template:
+    metadata:
+      labels:
+        app: masterdata
+    spec:
+      containers:
+      - name: db
+        image: shribee/db:latest
+        ports:
+        - containerPort: 3306
+      - name: api
+        image: shribee/api:latest
+        ports:
+        - containerPort: 80
+          hostPort: 38081
+        env:
+        - name: DATABASE_URL
+          value: mysql+pymysql://root:sb@127.0.0.1:3306/MasterData
+      

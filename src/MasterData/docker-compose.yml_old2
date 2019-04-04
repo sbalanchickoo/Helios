@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  api:
+    build: './MasterDataAPI'
+    ports:
+      - "38081:80"
+    depends_on:
+      - mysql
+    environment:
+      - DATABASE_URL=mysql+pymysql://root:sb@mysql/MasterData
+  mysql:
+    build: './MasterDataDB'    
+    ports:
+      - "38080:3306"

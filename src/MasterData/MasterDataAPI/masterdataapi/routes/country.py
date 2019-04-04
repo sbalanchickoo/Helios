@@ -1,17 +1,28 @@
 from masterdataapi import app
-from flask import make_response, jsonify, request
-from views.dataretrieve import *
+from flask import make_response, jsonify, request, url_for
+from views.data_retrieve import *
 from views.dataupsert import *
 from flask_jwt_extended import jwt_required
+
+
+def make_public_country(country):
+    new_country = {}
+    for field in country:
+        if field == 'id':
+            new_country['uri'] = url_for('return_country_by_name', country_name=country['country_name'], _external=True)
+        else:
+            new_country[field] = country[field]
+    return new_country
 
 
 @app.route("/masterdata/api/v1/country/currency/<string:currency_code>", methods=['GET'])
 def return_country_by_currency(currency_code):
     countries = get_country_by_currency(currency_code)
+    response = [make_public_country(i.serialize) for i in countries]
     if len(countries) == 0:
         return make_response(jsonify({'error': 'Not found'}), 404)
     else:
-        return jsonify({'countries': countries})
+        return jsonify({'countries': response})
 
 
 @app.route("/masterdata/api/v1/countries", methods=['GET'])
@@ -23,7 +34,8 @@ def return_country_by_name():
         countries = get_country_by_currency(request.args['currency_code'])
     else:
         countries = get_countries()
-    return jsonify({'countries': countries})
+    response = [make_public_country(i.serialize) for i in countries]
+    return jsonify({'countries': response})
 
 
 @app.route('/masterdata/api/v1/country', methods=['POST'])

@@ -15,6 +15,24 @@ def add_country(country):
 
 
 def update_country_name(old_name, new_name):
+    """ Update the country name.
+
+    >>> update_country_name("a", "b")
+    0
+
+    Parameters
+    ----------
+    old_name : string
+        Original name of country
+    new_name : string
+        New name of country
+
+    Returns
+    -------
+    status : int
+        update from SQLAlchemy
+
+    """
     result = Country.query.all()
     response = [i.serialize for i in result]
     country_check = [c for c in response if c['country_name'].lower() == old_name.lower()]

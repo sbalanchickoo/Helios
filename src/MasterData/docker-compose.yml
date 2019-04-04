@@ -2,19 +2,15 @@ version: '3'
 
 services:
   api:
-    build: './MasterDataAPI'
+    image: shribee/api:latest
     ports:
       - "38081:80"
     depends_on:
       - mysql
-  mysql:
-    image: mysql:latest
-    volumes:
-      - ~/docker/data/masterdata:/docker-entrypoint-initdb.d
+    restart: on-failure
     environment:
-      - "MYSQL_ROOT_PASSWORD=sb"
-      - "MYSQL_DATABASE=MasterData"
-      - "MYSQL_USER=reader"
-      - "MYSQL_PASSWORD=reader"
+      - DATABASE_URL=mysql+pymysql://root:sb@mysql/MasterData
+  mysql:
+    image: shribee/db:latest    
     ports:
-      - "3306:3306"
+      - "38080:3306"

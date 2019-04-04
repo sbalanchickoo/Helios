@@ -1,6 +1,6 @@
 from masterdataapi import app
 from flask import make_response, jsonify, request
-from views.dataretrieve import *
+from views.data_retrieve import *
 
 
 @app.route("/masterdata/api/v1/states", methods=['GET'])
