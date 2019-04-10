@@ -3,6 +3,7 @@ import models
 from .data_retrieve import get_states, get_countries
 from flask import url_for
 import unittest
+from masterdataapi import app
 
 
 class TestDataRetrieve(unittest.TestCase):

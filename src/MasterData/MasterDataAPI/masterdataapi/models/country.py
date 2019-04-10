@@ -18,12 +18,14 @@ class Country(db.Model):
             'country_name': self.country_name
         }
 
-    def add_country(self, new_country):
+    @staticmethod
+    def add_country(new_country):
         db.session.add(new_country)
         db.session.commit()
         return 1
 
-    def update_country_name(self, old_name, new_name):
-        self.query.filter_by(country_name = old_name).update({'country_name':new_name})
+    @staticmethod
+    def update_country_name(old_name, new_name):
+        Country.query.filter_by(country_name = old_name).update({'country_name':new_name})
         db.session.commit()
         return 1

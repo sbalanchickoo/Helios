@@ -6,7 +6,12 @@ from sqlalchemy.orm.exc import NoResultFound, MultipleResultsFound
 
 def get_states():
     states = State.query.filter(State.abbrev != '').all()
-    return [i.serialize for i in states]
+    return states
+
+
+def get_state_by_abbrev(abbrev):
+    state = State.query.filter_by(abbrev=abbrev)
+    return state
 
 
 def get_countries():
@@ -20,8 +25,8 @@ def get_country_by_currency(currency_code):
 
 
 def get_country_by_name(name):
-    countries = Country.query.filter_by(country_name=name)
-    return countries
+    country = Country.query.filter_by(country_name=name)
+    return country
 
 
 def get_users():

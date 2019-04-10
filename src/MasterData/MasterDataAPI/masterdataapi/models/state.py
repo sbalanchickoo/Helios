@@ -13,6 +13,7 @@ class State(db.Model):
     @property
     def serialize(self):
         return {
+            'id': self.id,
             'abbrev': self.abbrev,
             'fullname': self.state
         }

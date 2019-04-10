@@ -22,11 +22,13 @@ class User(db.Model):
         self.registered_on = datetime.datetime.now()
         self.admin = admin
 
+    @staticmethod
     def add_user(new_user):
         db.session.add(new_user)
         db.session.commit()
         return 1
 
+    @staticmethod
     def hash_password(password):
         return bcrypt.using(rounds=13).hash(password)
 

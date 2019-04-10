@@ -1,18 +1,19 @@
-from masterdataapi import app
-from flask import make_response, jsonify, request
+from flask import make_response, jsonify, request, Blueprint
 from views.data_retrieve import *
 from views.dataupsert import *
-from flask_jwt_extended import create_access_token, create_refresh_token, jwt_required, jwt_refresh_token_required, get_jwt_identity, get_raw_jwt
+from flask_jwt_extended import create_access_token, create_refresh_token, jwt_refresh_token_required, get_jwt_identity
+
+user_route = Blueprint('user', __name__)
 
 
-@app.route("/masterdata/api/v1/users", methods=['GET'])
+@user_route.route("/masterdata/api/v1/users", methods=['GET'])
 def return_users():
     users = get_users()
     response = jsonify(users = users)
     return response
 
 
-@app.route("/masterdata/api/v1/user", methods=['POST'])
+@user_route.route("/masterdata/api/v1/user", methods=['POST'])
 def create_user():
     if not request.json \
             or not 'first_name' in request.json \
@@ -50,7 +51,7 @@ def create_user():
                     return make_response(jsonify({'message': 'Something went wrong'}), 500)
 
 
-@app.route("/masterdata/api/v1/login", methods=['GET'])
+@user_route.route("/masterdata/api/v1/login", methods=['GET'])
 def return_user():
     if not request.json \
             or not 'email' in request.json \
