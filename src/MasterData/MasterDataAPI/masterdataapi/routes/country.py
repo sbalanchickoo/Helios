@@ -5,6 +5,7 @@ from flask_jwt_extended import jwt_required
 
 country_route = Blueprint('country', __name__)
 
+
 def make_public_country(country):
     new_country = {}
     for field in country:
@@ -26,7 +27,6 @@ def return_country_by_currency(currency_code):
 
 
 @country_route.route("/countries", methods=['GET'])
-#@jwt_required
 def return_country_by_name():
     if 'country_name' in request.args:
         countries = get_country_by_name(request.args['country_name'])
@@ -39,6 +39,7 @@ def return_country_by_name():
 
 
 @country_route.route('/country', methods=['POST'])
+@jwt_required
 def create_country():
     if not request.json or not 'country_name' in request.json or not 'currency_code' in request.json:
         return make_response(jsonify({'error': 'Invalid input'}), 404)
@@ -58,7 +59,9 @@ def create_country():
             return jsonify({'country': country[0]}), 201
             #return country[0]
 
+
 @country_route.route('/country', methods=['PUT'])
+@jwt_required
 def update_country():
     if not request.json or ( \
                     (not 'old_name' in request.json or not 'new_name' in request.json) and \

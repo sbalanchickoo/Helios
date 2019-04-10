@@ -22,7 +22,3 @@ config = {
 
     'default': Config
 }
-#db.init_app(app)
-# config - run - mda
-# config - models - views - mda
-# run - models

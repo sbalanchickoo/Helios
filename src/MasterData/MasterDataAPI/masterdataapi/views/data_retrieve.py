@@ -1,17 +1,6 @@
-from models.state import State
 from models.country import Country
 from models.user import User
 from sqlalchemy.orm.exc import NoResultFound, MultipleResultsFound
-
-
-def get_states():
-    states = State.query.filter(State.abbrev != '').all()
-    return states
-
-
-def get_state_by_abbrev(abbrev):
-    state = State.query.filter_by(abbrev=abbrev)
-    return state
 
 
 def get_countries():
