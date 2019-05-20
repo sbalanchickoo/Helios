@@ -18,6 +18,14 @@ def make_public_country(country):
 
 @country_route.route("/country/currency/<string:currency_code>", methods=['GET'])
 def return_country_by_currency(currency_code):
+    """
+    
+    Args:
+        currency_code:
+
+    Returns:
+
+    """
     countries = get_country_by_currency(currency_code)
     response = [make_public_country(i.serialize) for i in countries]
     if len(countries) == 0:
