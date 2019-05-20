@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+Thermos -- Add a bookmark
+{% endblock %}
+
+{% block content %}
+    <header>
+        <h1>{{ title_bar }}</h1>
+    </header>
+    <form action="" method="post">
+        <p>
+            Please enter bookmark
+            <input type="text" name="url">
+        </p>
+        <p>
+            <button type="submit">Submit</button>
+        </p>
+
+    </form>
+{% endblock %}
+
+{% block sidebar %}
+{% endblock %}
