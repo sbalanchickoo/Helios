@@ -1,17 +1,47 @@
-from flask import Flask, url_for, render_template
+from flask import Flask, url_for, render_template, request, redirect, flash
+from _datetime import datetime
+from logging import DEBUG
+from addform import BookmarkForm
 
 app = Flask(__name__)
+app.logger.setLevel(DEBUG)
+app.config['SECRET_KEY']="b'|\xec\x08\x8b<\x93m\x11\x03YP\x8a\xcc]\xf5\xc1k]\xf5\xa4""\xd0[\x91'"
+
+bookmarks = []
+
+
+def store_bookmark(url, description):
+    bookmarks.append({
+        'url': url,
+        'description': description,
+        'user': 'Srikant',
+        'date_added': datetime.utcnow()
+    })
+
+
+def new_bookmarks(num):
+    return sorted(bookmarks, key=lambda bookmark: bookmark['date_added'], reverse=True)[:num]
 
 
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template('index.html', title_bar = 'Welcome')
+    return render_template('index.html', title_bar = 'Welcome', new_bookmarks=new_bookmarks(2))
 
 
-@app.route('/add')
+@app.route('/add', methods=['GET', 'POST'])
 def add_url():
-    return render_template('add.html', title_bar = 'Add a URL')
+    form = BookmarkForm()
+    # if request.method == 'POST':
+    if form.validate_on_submit():
+        # url = request.form['url']
+        url = form.url.data
+        description = form.description.data
+        store_bookmark(url, description)
+        app.logger.debug('stored url: ' + url)
+        flash("Stored bookmark '{}'".format(url))
+        return redirect(url_for('index'))
+    return render_template('add.html', form=form, title_bar = 'Add a URL')
 
 
 @app.errorhandler(404)

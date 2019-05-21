@@ -9,14 +9,22 @@ Thermos -- Add a bookmark
         <h1>{{ title_bar }}</h1>
     </header>
     <form action="" method="post">
-        <p>
-            Please enter bookmark
-            <input type="text" name="url">
-        </p>
-        <p>
-            <button type="submit">Submit</button>
-        </p>
-
+        {{form.hidden_tag()}}
+        <table>
+            <tr>
+                <td>Please enter bookmark</td>
+                <td>{{form.url(size=50)}}</td>
+            </tr>
+            <tr>
+                <td>Please enter an optional description</td>
+                <td>{{form.description(size=50)}}</td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td></td>
+                <td><button type="submit">Submit</button></td>
+            </tr>
+        </table>
     </form>
 {% endblock %}
 
