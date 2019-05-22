@@ -31,17 +31,17 @@ def index():
 
 @app.route('/add', methods=['GET', 'POST'])
 def add_url():
-    form = BookmarkForm()
+    add_form = BookmarkForm()
     # if request.method == 'POST':
-    if form.validate_on_submit():
+    if add_form.validate_on_submit():
         # url = request.form['url']
-        url = form.url.data
-        description = form.description.data
+        url = add_form.url.data
+        description = add_form.description.data
         store_bookmark(url, description)
         app.logger.debug('stored url: ' + url)
         flash("Stored bookmark '{}'".format(url))
         return redirect(url_for('index'))
-    return render_template('add.html', form=form, title_bar = 'Add a URL')
+    return render_template('add.html', form=add_form, title_bar='Add a URL')
 
 
 @app.errorhandler(404)

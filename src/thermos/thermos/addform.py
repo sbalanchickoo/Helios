@@ -1,9 +1,22 @@
 from flask_wtf import Form
 from wtforms.fields import StringField
 from flask_wtf.html5 import URLField
-from wtforms.validators import DataRequired, url
+from wtforms.validators import DataRequired, url, email, length
 
 
 class BookmarkForm(Form):
-    url = URLField('url_label', validators=[DataRequired(), url()])
-    description = StringField('description_label')
+    url = URLField(label='Please enter URL', validators=[DataRequired(), url()])
+    description = StringField(label='Please enter a description')
+
+    def validate(self):
+        if not self.url.data.startswith("http://") or\
+                self.url.data.startswith("https://"):
+            self.url.data = "http://" + self.url.data
+
+        if not Form.validate(self):
+            return False
+
+        if not self.description.data:
+            self.description.data = self.url.data
+
+        return True

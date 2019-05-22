@@ -1,0 +1,8 @@
+.flashes {
+    background: #FF9671;
+}
+
+.error, .error input {
+    color: red;
+    border-color: blue;
+}
