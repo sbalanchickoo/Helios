@@ -1,4 +1,5 @@
-from run import db
+# Local application imports
+from thermos import db
 
 
 class User(db.Model):
@@ -6,6 +7,7 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), unique=True)
     email = db.Column(db.String(120), unique=True)
+    bookmarks = db.relationship('Bookmark', backref='User', lazy='dynamic')
 
     def __repr__(self):
         return "<User %r>" % self.username

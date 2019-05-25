@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+Thermos -- Bookmarks for user {{ user.username }}
+{% endblock %}
+
+{% block content %}
+    <article>
+        <header>
+            <h1>{{ title_bar }}</h1>
+            <p>This is an application for storing bookmarks.</p>
+            <p>Bookmarks for user {{ user.username }}</p>
+        </header>
+        <section>
+            <h2>Bookmarks</h2>
+            {% if bookmarks %}
+            <ul>
+                {% for bookmark in bookmarks %}
+                <li>{{ bookmark.User.username }}
+                    added <a href="{{ bookmark.url }}">{{ bookmark.description }}</a>
+                    on {{ bookmark.date.strftime("%a, %d %b %Y at %H:%M:%S") }}
+                </li>
+                {% endfor %}
+            </ul>
+            {% endif%}
+        </section>
+        <footer>
+            <h3>article footer h3</h3>
+        </footer>
+    </article>
+{% endblock %}

@@ -1,5 +1,5 @@
+# Standard library imports
 import os
-import datetime
 
 
 class Config:

@@ -15,7 +15,8 @@ Thermos -- Welcome
             {% if new_bookmarks %}
                 <ul>
                     {% for b in new_bookmarks %}
-                        <li>{{ b.user }} added bookmark <a href="{{ b.url }}">{{ b.url }}</a></li>
+                    <li><a href="{{ url_for('user_bookmarks', username=b.User.username) }}">
+                        {{ b.User.username }}</a> added bookmark <a href="{{ b.url }}">{{ b.description }}</a></li>
                     {% endfor %}
                 </ul>
             {% else %}
