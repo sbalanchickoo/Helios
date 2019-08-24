@@ -1,27 +1,15 @@
 # Standard library imports
-import datetime
+
+# Third party imports
 
 # Local application imports
 from thermos.models.user import User
-
-bookmarks = []
-
-
-def store_bookmark(url, description):
-    bookmarks.append({
-        'url': url,
-        'description': description,
-        'user': 'Srikant',
-        'date_added': datetime.utcnow()
-    })
+from .. import login_manager
 
 
-# Fake login
-def logged_in_user():
-    return User.query.filter_by(username='Shri').first()
-
-
-def new_bookmarks(num):
-    return sorted(bookmarks, key=lambda bookmark: bookmark['date_added'], reverse=True)[:num]
-
+# Retrieves the logged in user object for the global login_manager which will be saved in the http session
+# Required by login manager, must be decorated with login_manager.user_loader
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
 

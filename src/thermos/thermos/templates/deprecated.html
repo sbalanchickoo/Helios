@@ -1,0 +1,13 @@
+<ul>
+                    {% for b in new_bookmarks %}
+                    <li><a href="{{ url_for('user_bookmarks', username=b.User.username) }}">
+                        {{ b.User.username }}</a> added bookmark <a href="{{ b.url }}">{{ b.description }}</a></li>
+                    {% endfor %}
+                </ul>
+
+{% for bookmark in bookmarks %}
+                <li>{{ bookmark.user.username }}
+                    added <a href="{{ bookmark.url }}">{{ bookmark.description }}</a>
+                    on {{ bookmark.date.strftime("%a, %d %b %Y at %H:%M:%S") }}
+                </li>
+                {% endfor %}

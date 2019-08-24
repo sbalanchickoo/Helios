@@ -2,12 +2,12 @@
 {% from "form_macros.html" import render_field %}
 
 {% block page_title %}
-Thermos -- Add a bookmark
+Thermos -- {{ operation }}
 {% endblock %}
 
 {% block content %}
     <header>
-        <h1>{{ title_bar }}</h1>
+        <h1>Thermos -- {{ operation }}</h1>
     </header>
     <form action="" method="post">
         {{form.hidden_tag()}}

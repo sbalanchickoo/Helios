@@ -6,3 +6,8 @@
     color: red;
     border-color: blue;
 }
+
+.bookmarkitem {
+    border-bottom-style: ridge;
+    border-width: 1px;
+}
