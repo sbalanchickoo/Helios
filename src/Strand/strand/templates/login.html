@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% from "form_macros.html" import render_field %}
+
+{% block page_title %}
+Strand - Login
+{% endblock %}
+
+{% block title_bar %}
+Strand - Login
+{% endblock %}
+
+{% block content %}
+    <header>
+            <h1>{{ title_bar }}</h1>
+    </header>
+    <form action="" method="post">
+        {{form.hidden_tag()}}
+        <table>
+            {{ render_field(form.username, size=50) }}
+            {{ render_field(form.password, size=50) }}
+            {{ render_field(form.remember_me) }}
+        </table>
+        <button>Submit</button>
+    </form>
+
+{% endblock %}

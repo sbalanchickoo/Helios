@@ -1,0 +1,31 @@
+foodId,brandName,foodName,servingType,units,calories,fat,saturatedFat,sodium,carbohydrates,fiber,sugar,protein
+1,Generic,Tofu - fried,Piece,1,35,2.6,0.4,0,2,1.4,0.5,0.4
+2,Generic,Mushroom - fried,Cup,1,150,7.7,0.7,0,274,16,1.2,1.4
+3,Generic,Soy sauce,Tablespoon,1,10,0,0,0,894,1,0,0
+4,Quaker,Oat so simple - 27g,Sachet,1,100,2,0,0,0,16,3,0
+5,Tesco,Semi-skimmed milk,Cup,1,118,4,3,0,0,11,0,11
+6,Generic,White rice - cooked,Cup,1,204,0,0,0,200,44,1,0
+7,Generic,Medium egg - boiled,Misc,1,78,5,0,0,0,1,0,0
+8,Generic,Whey protein,Scoop,1,130,2,1,0,85,2,0,1
+9,Pret,Avocado and herb salad wrap,Wrap,1,471,27.5,5.3,0,560,40.3,0,0
+10,Tesco,Cheddar ploughman's sandwich,Sandwich,1,463,18.5,8.9,0,640,52.6,4.1,10
+11,Generic,Coca cola regular - 500 ml,Bottle,1,210,0,0,0,0,54,0,54
+12,Generic,Ferrero rocher,Misc,1,73,5.3,1.7,0,5,5.3,0.3,5
+13,Papa john's,Veggie supreme medium,Slice,1,280,9,4,0,680,39,2,5
+14,Generic,Almond - raw,Full,1,6.83,0.59,0,0,0,0.25,0.15,0.05
+15,Generic,Walnut,Half,1,13.21,1.32,0,0,0,0.28,0.14,0.05
+16,Pret,Butternut and lentil dal side soup,Serving,1,118,2.9,1.5,0,596,8.8,10.1,2.9
+17,Generic,Gala apple medium,Misc,1,98,0,0,0,2,24,4,18
+18,Tesco,Blueberries,Handful,1,68,0.3,0,0,0,14.5,2.4,10
+19,Quaker,Oat so simple - 36g,Sachet,1,143,2.6,0.3,0.18,26,2.1,6.9,3.1
+20,Generic,Large egg white - boiled,Misc,1,17,0,0,0,0,0,0,4
+21,Generic,Bap,Full,1,220,2.8,0,0,40.9,0,0,7
+22,Generic,Carrot,Handful,1,41,0.2,0,0,9.6,2.8,4.7,0.9
+23,Generic,Hummus,Tablespoon,1,,,,,,,,
+24,Hovis,Wholemeal bread,Slice,1,88,0.7,0.2,0.9,15.1,2.7,1.6,4
+25,Generic,Olive oil,Tablespoon,1,,,,,,,,
+26,Asda,Garlic bread,Slice,1,,,,,,,,
+27,Asda,Blueberries,Handful,1,68,0.3,0,0,0,14.5,2.4,10
+28,Asda,Wholemeal mini wrap,Wrap,1,89,1.4,0.6,0.22,15,2.6,0.9,2.8
+28,Rubicon,Mango juice,Ml,100,28,0.5,0.5,,5,0,4.9,0.5
+29,Generic,Tandoori chicken,Half,,,,,,,,,

@@ -1,0 +1,135 @@
+.top-panel {
+    top: 0;
+    height: 100px;
+    width: 100%;
+    background: var(--header-bg-color);
+}
+
+.logo {
+  left: 0;
+  margin-top: 0px;
+  margin-left: 0px;
+  padding: 0%;
+  width: 200px;
+  position:fixed;
+}
+
+.footer-panel {
+    position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-right: 5px;
+}
+
+.menubar {
+  float: right;
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/dariusz-sankowski-unsplash.jpg");
+    background-size:100% 100%;
+}
+.main {
+  top: 100px;
+  left: 200px;
+  padding-left: 1%;
+  position: fixed;
+  width: 100%;
+    height: 100%;
+    background-image: url("../img/dariusz-sankowski-unsplash.jpg");
+    background-size:100% 100%;
+}
+
+/* The sidebar menu */
+.navbar {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 200px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 100px; /* Stay at the top */
+  left: 0;
+   /*#2B303A; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  border-right: 1px solid var(--sidebar-border-color);
+}
+
+.logo a, .logo a:hover, .logo a:active, .logo a:visited, .logo a:focus {
+  text-decoration: none;
+  font: italic bold 50px 'Script MT', serif;
+  color: var(--title-color);
+}
+
+
+/* Toolbar menu links */
+.menubar a, .menubar a:visited{
+  padding: 8px 16px 8px 16px;
+  margin-bottom: 4px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 0px;
+  text-align: center;
+  float: left;
+  display: block;
+  /*line-height: 18px;*/
+  border-radius: 5px 5px 5px 5px;
+  text-decoration: none;
+  font-size: 15px;
+  color: var(--sidebar-link-color);
+}
+
+/* When you mouse over the toolbar links, change their color */
+.menubar a:hover{
+  color: var(--menu-link-hover-color);
+  background: var(--menu-link-hover-bg-color);
+}
+
+
+html {
+  font: 'Arial';
+}
+
+body {
+    font: 16px/26px Calibri, Helvetica Neue, Arial;
+}
+/* Form errors */
+.error-text {
+  color: red;
+}
+
+
+/* The sidebar menu links */
+.navbar a, .navbar a:visited{
+  display: block;
+  padding: 8px 8px 8px 8px;
+  margin-bottom: 4px;
+  margin-left: 3px;
+  margin-right: 3px;
+  color: var(--sidebar-link-color);
+  border-radius: 5px 5px 5px 5px;
+  border-top: 1px solid var(--sidebar-border-color);
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* When you mouse over the sidebar links, change their color */
+.navbar a:hover{
+  color: var(--menu-link-hover-color);
+  background: var(--menu-link-hover-bg-color);
+}
+
+/* Toolbar menu */
+
+table, td {
+  border: 1px solid #cecfd5;
+  border-collapse: collapse;
+}
+
+.field-label {
+  padding-right: 5px;
+}
+
+
