@@ -19,9 +19,9 @@ class User(db.Model, UserMixin):
     email = db.Column(db.String(120), unique=True)
     password_hash = db.Column(db.String(255), nullable=False)
 
-    # backref can be anything, neither the class name nor table name
-    weight_rel = db.relationship('Weight', backref='user', lazy='dynamic')
-    blood_pressure_rel = db.relationship('BloodPressure', backref='user', lazy='dynamic')
+    # backref can be anything, either the class name or table name
+    weight_rel = db.relationship('MetricsLog', backref='user', lazy='dynamic')
+    blood_pressure_rel = db.relationship('BloodPressureLog', backref='User', lazy='dynamic')
 
     #def __repr__(self):
     #    return "<User %r>" % self.username

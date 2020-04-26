@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% from "form_macros.html" import render_field %}
+
+{% block content %}
+<header>
+    <h1>Add weight details</h1>
+</header>
+<form action="" method="post">
+    {{form.hidden_tag()}}
+    <table>
+        {{ render_field(form.date, size=50) }}
+        {{ render_field(form.weight, size=50) }}
+        {{ render_field(form.body_fat_percent, size=50) }}
+        {{ render_field(form.bmi, size=50) }}
+        {{ render_field(form.notes, size=50) }}
+    </table>
+    <button>Submit</button>
+<h1>Recent entries</h1>
+    <table>
+        <tr>
+            <th class="field-label">Date</th>
+            <th class="field-label">Weight (KG)</th>
+            <th class="field-label">Body Fat Percent</th>
+            <th class="field-label">BMI</th>
+        </tr>
+        {% for entry in recent %}
+        <tr>
+            <td class="field-label">{{ entry.date.strftime('%Y-%m-%d') }}</td>
+            <td class="field-label">{{ entry.weight }}</td>
+            <td class="field-label">{{ entry.body_fat_percent }}</td>
+            <td class="field-label">{{ entry.bmi }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</form>
+{% endblock %}

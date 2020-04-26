@@ -8,34 +8,36 @@ from sqlalchemy import desc
 from strand import db
 
 
-class BloodPressure(db.Model):
-    __tablename__ = 'BloodPressure'
+class MetricsLog(db.Model):
+    __tablename__ = 'MetricsLog'
     id = db.Column('id', db.Integer, primary_key=True)
     date = db.Column(db.DateTime, unique=True, default=datetime.utcnow)
-    systolic = db.Column('Systolic', db.Integer, nullable=False)
-    diastolic = db.Column('Diastolic', db.Integer, nullable=False)
+    weight_kg = db.Column('WeightKG', db.Float, nullable=True)
+    bmi = db.Column('BMI', db.Float, nullable=True)
+    body_fat_percent = db.Column('BodyFatPercent', db.Float, nullable=True)
     notes = db.Column('Notes', db.String(300))
     # foreign key name is table name.id
     user_id = db.Column(db.Integer, db.ForeignKey('User.id'), nullable=False)
 
     @staticmethod
     def newest(num):
-        return BloodPressure.query.order_by(desc(BloodPressure.date)).limit(num)
+        return MetricsLog.query.order_by(desc(MetricsLog.date)).limit(num)
 
     @staticmethod
     def all():
-        return BloodPressure.query.order_by(desc(BloodPressure.date))
+        return MetricsLog.query.order_by(desc(MetricsLog.date))
 
-
-# def __repr__(self):
-#    return "<Bookmark '{}: '{}'>".format(self.description, self.url)
+    # @staticmethod
+    # def __repr__(self):
+    #    return "<Weight '{}: '{}'>".format(self.description, self.url)
 
     @property
     def serialize(self):
         return {
             'id': self.id,
             'date': self.date,
-            'systolic': self.systolic,
-            'diastolic': self.diastolic,
+            'weight_kg': self.weight_kg,
+            'bmi': self.bmi,
+            'body_fat_percent': self.body_fat_percent,
             'notes': self.notes
          }

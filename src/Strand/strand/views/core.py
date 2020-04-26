@@ -1,8 +1,21 @@
 from flask import render_template
 from flask import Blueprint, flash, redirect, url_for, request
-from ..viewmodels import blood_pressure_form, weight_form, signup_form, login_form as lg_form
+from ..viewmodels import \
+    blood_pressure_log_form\
+    , metrics_log_form\
+    , exercise_log_form\
+    , exercise_metadata_form\
+    , body_part_metadata_form\
+    , signup_form\
+    , login_form as lg_form
 from ..viewmodels.signup_form import SignupForm
-from ..models import weight, user, blood_pressure
+from ..models import \
+    metrics_log\
+    , user\
+    , blood_pressure_log\
+    , body_part_metadata\
+    , exercise_metadata\
+    , exercise_log
 from .. import db
 from decimal import Decimal
 from ..config import Config
@@ -10,6 +23,7 @@ from datetime import datetime
 from flask_login import login_required, login_user, logout_user, current_user
 from ..viewmodels.login_manager import load_user
 
+# <name of blueprint to be registered> = Blueprint('<friendly name to be used in URLs>', __name__)
 core_blueprint = Blueprint('core', __name__)
 
 
@@ -19,54 +33,14 @@ def index():
     return render_template('index.html')
 
 
-@core_blueprint.route('/weight', methods=['GET', 'POST'])
-@login_required
-def add_weight():
-    wt_form = weight_form.WeightForm()
-    recent = weight.Weight.newest(5)
-    if request.method == 'POST':
-        if wt_form.validate_on_submit():
-            weight_entry = weight.Weight(
-                body_weight=Decimal(wt_form.body_weight.data),
-                body_fat_percent = Decimal(wt_form.body_fat_percent.data),
-                date=wt_form.date.data,
-                user=current_user,
-                notes=wt_form.notes.data,
-            )
-            db.session.add(weight_entry)
-            db.session.commit()
-            flash("Weight entry added!")
-            return redirect(url_for('core.add_weight'))
-    else:
-        entries = [entry for entry in recent]
-        if len(entries) > 0:
-            recent_entry = max(entries, key=lambda x: x.date)
-        else:
-            recent_entry = weight.Weight(
-                body_weight=0,
-                body_fat_percent=0,
-                date=datetime.utcnow(),
-                user=current_user
-            )
-        wt_form.body_weight.data = recent_entry.body_weight
-        wt_form.body_fat_percent.data = recent_entry.body_fat_percent
-        wt_form.date.data = recent_entry.date
-        return render_template('weight.html', form=wt_form
-                               , title_bar='Add weight details'
-                               , recent=recent)
-    return render_template('weight.html', form=weight_form.WeightForm()
-                           , title_bar='Add weight details'
-                           , recent=recent)
-
-
 @core_blueprint.route('/bloodpressure', methods=['GET', 'POST'])
 @login_required
-def add_blood_pressure():
-    bp_form = blood_pressure_form.BloodPressureForm()
-    recent = blood_pressure.BloodPressure.newest(5)
+def log_blood_pressure():
+    bp_form = blood_pressure_log_form.BloodPressureForm()
+    recent = blood_pressure_log.BloodPressure.newest(5)
     if request.method == 'POST':
         if bp_form.validate_on_submit():
-            blood_pressure_entry = blood_pressure.BloodPressure(
+            blood_pressure_entry = blood_pressure_log.BloodPressure(
                 systolic=int(bp_form.systolic.data),
                 diastolic=int(bp_form.diastolic.data),
                 date=bp_form.date.data,
@@ -76,13 +50,13 @@ def add_blood_pressure():
             db.session.add(blood_pressure_entry)
             db.session.commit()
             flash("Blood pressure entry added!")
-            return redirect(url_for('core.add_blood_pressure'))
+            return redirect(url_for('core.log_blood_pressure'))
     else:
         entries = [entry for entry in recent]
         if len(entries) > 0:
             recent_entry = max(entries, key=lambda x: x.date)
         else:
-            recent_entry = blood_pressure.BloodPressure(
+            recent_entry = blood_pressure_log.BloodPressure(
                 systolic=0,
                 diastolic=0,
                 date=datetime.utcnow(),
@@ -91,11 +65,140 @@ def add_blood_pressure():
         bp_form.systolic.data = recent_entry.systolic
         bp_form.diastolic.data = recent_entry.diastolic
         bp_form.date.data = recent_entry.date
-        return render_template('blood_pressure.html', form=bp_form
+        return render_template('blood_pressure_log.html', form=bp_form
                                , title_bar='Add blood pressure details'
                                , recent=recent)
-    return render_template('weight.html', form=blood_pressure_form.BloodPressureForm()
+    return render_template('metrics_log.html', form=blood_pressure_log_form.BloodPressureForm()
                            , title_bar='Add blood pressure details')
+
+
+@core_blueprint.route('/metrics', methods=['GET', 'POST'])
+@login_required
+def log_metrics():
+    local_form = metrics_log_form.MetricsLogForm()
+    recent = metrics_log.MetricsLog.newest(5)
+    if request.method == 'POST':
+        if local_form.validate_on_submit():
+            new_metrics_log = metrics_log.MetricsLog(
+                body_weight=Decimal(local_form.body_weight.data),
+                body_fat_percent = Decimal(local_form.body_fat_percent.data),
+                bmi=Decimal(local_form.bmi.data),
+                date=local_form.date.data,
+                user=current_user,
+                notes=local_form.notes.data,
+            )
+            db.session.add(new_metrics_log)
+            db.session.commit()
+            flash("Metrics added!")
+            return redirect(url_for('core.log_metrics'))
+    else:
+        entries = [entry for entry in recent]
+        if len(entries) > 0:
+            recent_entry = max(entries, key=lambda x: x.date)
+        else:
+            recent_entry = metrics_log.MetricsLog(
+                body_weight=0,
+                body_fat_percent=0,
+                bmi=0,
+                date=datetime.utcnow(),
+                user=current_user
+            )
+        local_form.body_weight.data = recent_entry.body_weight
+        local_form.body_fat_percent.data = recent_entry.body_fat_percent
+        local_form.bmi.data = recent_entry.bmi
+        local_form.date.data = recent_entry.date
+        return render_template('metrics_log.html', form=local_form
+                               , title_bar='Add weight details'
+                               , recent=recent)
+    return render_template('metrics_log.html', form=metrics_log_form.MetricsLogForm()
+                           , title_bar='Add weight details'
+                           , recent=recent)
+
+
+@core_blueprint.route('/exercise', methods=['GET', 'POST'])
+@login_required
+def log_exercise():
+    local_form = exercise_log_form()
+    recent = metrics_log.MetricsLog.newest(5)
+    if request.method == 'POST':
+        if local_form.validate_on_submit():
+            new_metrics_log = metrics_log.MetricsLog(
+                body_weight=Decimal(local_form.body_weight.data),
+                body_fat_percent = Decimal(local_form.body_fat_percent.data),
+                bmi=Decimal(local_form.bmi.data),
+                date=local_form.date.data,
+                user=current_user,
+                notes=local_form.notes.data,
+            )
+            db.session.add(new_metrics_log)
+            db.session.commit()
+            flash("Metrics added!")
+            return redirect(url_for('core.log_metrics'))
+    else:
+        entries = [entry for entry in recent]
+        if len(entries) > 0:
+            recent_entry = max(entries, key=lambda x: x.date)
+        else:
+            recent_entry = metrics_log.MetricsLog(
+                body_weight=0,
+                body_fat_percent=0,
+                bmi=0,
+                date=datetime.utcnow(),
+                user=current_user
+            )
+        local_form.body_weight.data = recent_entry.body_weight
+        local_form.body_fat_percent.data = recent_entry.body_fat_percent
+        local_form.bmi.data = recent_entry.bmi
+        local_form.date.data = recent_entry.date
+        return render_template('metrics_log.html', form=local_form
+                               , title_bar='Add weight details'
+                               , recent=recent)
+    return render_template('metrics_log.html', form=metrics_log_form.MetricsLogForm()
+                           , title_bar='Add weight details'
+                           , recent=recent)
+
+
+@core_blueprint.route('/manage', methods=['GET', 'POST'])
+@login_required
+def log_metrics():
+    local_form = metrics_log_form.MetricsLogForm()
+    recent = metrics_log.MetricsLog.newest(5)
+    if request.method == 'POST':
+        if local_form.validate_on_submit():
+            new_metrics_log = metrics_log.MetricsLog(
+                body_weight=Decimal(local_form.body_weight.data),
+                body_fat_percent = Decimal(local_form.body_fat_percent.data),
+                bmi=Decimal(local_form.bmi.data),
+                date=local_form.date.data,
+                user=current_user,
+                notes=local_form.notes.data,
+            )
+            db.session.add(new_metrics_log)
+            db.session.commit()
+            flash("Metrics added!")
+            return redirect(url_for('core.log_metrics'))
+    else:
+        entries = [entry for entry in recent]
+        if len(entries) > 0:
+            recent_entry = max(entries, key=lambda x: x.date)
+        else:
+            recent_entry = metrics_log.MetricsLog(
+                body_weight=0,
+                body_fat_percent=0,
+                bmi=0,
+                date=datetime.utcnow(),
+                user=current_user
+            )
+        local_form.body_weight.data = recent_entry.body_weight
+        local_form.body_fat_percent.data = recent_entry.body_fat_percent
+        local_form.bmi.data = recent_entry.bmi
+        local_form.date.data = recent_entry.date
+        return render_template('metrics_log.html', form=local_form
+                               , title_bar='Add weight details'
+                               , recent=recent)
+    return render_template('metrics_log.html', form=metrics_log_form.MetricsLogForm()
+                           , title_bar='Add weight details'
+                           , recent=recent)
 
 
 @core_blueprint.route('/login', methods=['GET', 'POST'])

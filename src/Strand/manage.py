@@ -9,7 +9,13 @@ from pathlib import Path
 app = create_app()
 with app.app_context():
     # Import models and views so that the create all statement will include them
-    from strand.models import weight, user, blood_pressure
+    from strand.models import \
+        blood_pressure_log \
+        , body_part_metadata \
+        , exercise_log \
+        , exercise_metadata \
+        , metrics_log \
+        , user
     from strand.views.core import core_blueprint
     app.register_blueprint(core_blueprint, url_prefix='/')
 
