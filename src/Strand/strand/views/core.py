@@ -37,12 +37,13 @@ def index():
 @login_required
 def log_blood_pressure():
     bp_form = blood_pressure_log_form.BloodPressureForm()
-    recent = blood_pressure_log.BloodPressure.newest(5)
+    recent = blood_pressure_log.BloodPressureLog.newest(5)
     if request.method == 'POST':
         if bp_form.validate_on_submit():
-            blood_pressure_entry = blood_pressure_log.BloodPressure(
+            blood_pressure_entry = blood_pressure_log.BloodPressureLog(
                 systolic=int(bp_form.systolic.data),
                 diastolic=int(bp_form.diastolic.data),
+                heart_rate=int(bp_form.heart_rate.data),
                 date=bp_form.date.data,
                 user=current_user,
                 notes=bp_form.notes.data,
@@ -56,14 +57,16 @@ def log_blood_pressure():
         if len(entries) > 0:
             recent_entry = max(entries, key=lambda x: x.date)
         else:
-            recent_entry = blood_pressure_log.BloodPressure(
+            recent_entry = blood_pressure_log.BloodPressureLog(
                 systolic=0,
                 diastolic=0,
+                heart_rate=0,
                 date=datetime.utcnow(),
                 user=current_user
             )
         bp_form.systolic.data = recent_entry.systolic
         bp_form.diastolic.data = recent_entry.diastolic
+        bp_form.heart_rate.data = recent_entry.heart_rate
         bp_form.date.data = recent_entry.date
         return render_template('blood_pressure_log.html', form=bp_form
                                , title_bar='Add blood pressure details'
@@ -118,8 +121,8 @@ def log_metrics():
 @core_blueprint.route('/exercise', methods=['GET', 'POST'])
 @login_required
 def log_exercise():
-    local_form = exercise_log_form()
-    recent = metrics_log.MetricsLog.newest(5)
+    local_form = exercise_log_form.ExerciseLogForm()
+    recent = exercise_log.ExerciseLog.newest(5)
     if request.method == 'POST':
         if local_form.validate_on_submit():
             new_metrics_log = metrics_log.MetricsLog(
@@ -133,7 +136,7 @@ def log_exercise():
             db.session.add(new_metrics_log)
             db.session.commit()
             flash("Metrics added!")
-            return redirect(url_for('core.log_metrics'))
+            return redirect(url_for('core.log_exercise'))
     else:
         entries = [entry for entry in recent]
         if len(entries) > 0:
@@ -160,7 +163,7 @@ def log_exercise():
 
 @core_blueprint.route('/manage', methods=['GET', 'POST'])
 @login_required
-def log_metrics():
+def manage_metadata():
     local_form = metrics_log_form.MetricsLogForm()
     recent = metrics_log.MetricsLog.newest(5)
     if request.method == 'POST':
@@ -176,7 +179,7 @@ def log_metrics():
             db.session.add(new_metrics_log)
             db.session.commit()
             flash("Metrics added!")
-            return redirect(url_for('core.log_metrics'))
+            return redirect(url_for('core.manage_metadata'))
     else:
         entries = [entry for entry in recent]
         if len(entries) > 0:

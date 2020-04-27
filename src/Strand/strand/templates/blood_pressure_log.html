@@ -3,28 +3,28 @@
 
 {% block content %}
 <header>
-    <h1>Add blood pressure details</h1>
+    <h1 class="entry-header">Log blood pressure</h1>
 </header>
 <form action="" method="post">
     {{form.hidden_tag()}}
     <table>
         {{ render_field(form.systolic, size=50) }}
         {{ render_field(form.diastolic, size=50) }}
+        {{ render_field(form.heart_rate, size=50) }}
         {{ render_field(form.date, size=50) }}
         {{ render_field(form.notes, size=50) }}
     </table>
     <button>Submit</button>
-<h1>Recent entries</h1>
+<h1 class="entry-header">Recent entries</h1>
     <table>
         <tr>
-            <th class="field-label">Date</th>
-            <th class="field-label">Blood pressure (systolic)</th>
-            <th class="field-label">Blood pressure (diastolic)</th>
+            <th class="form-field-label">Date</th>
+            <th class="form-field-label">Entry</th>
         </tr>
         {% for entry in recent %}
         <tr>
-            <td class="field-label">{{ entry.date.strftime('%Y-%m-%d') }}</td>
-            <td class="field-label">{{ entry.systolic }} / {{ entry.diastolic }}</td>
+            <td class="form-field">{{ entry.date.strftime('%Y-%m-%d') }}</td>
+            <td class="form-field">{{ entry.systolic }} / {{ entry.diastolic }} / {{ entry.heart_rate }}</td>
         </tr>
         {% endfor %}
     </table>

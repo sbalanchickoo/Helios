@@ -9,6 +9,8 @@ class BloodPressureForm(Form):
                                , validators=[DataRequired(), NumberRange(min=0, max=200)])
     diastolic = IntegerField(label='Blood pressure (diastolic) '
                                     , validators=[DataRequired(), NumberRange(min=0, max=200)])
+    heart_rate = IntegerField(label='Heart rate '
+                             , validators=[DataRequired(), NumberRange(min=0, max=100)])
     date = DateField(label='Date ', default=datetime.utcnow()
                      , validators=[DataRequired(message='Enter a valid date'), ])
     notes = StringField(label='Additional notes')

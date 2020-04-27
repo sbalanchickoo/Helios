@@ -21,7 +21,7 @@ class User(db.Model, UserMixin):
 
     # backref can be anything, either the class name or table name
     weight_rel = db.relationship('MetricsLog', backref='user', lazy='dynamic')
-    blood_pressure_rel = db.relationship('BloodPressureLog', backref='User', lazy='dynamic')
+    blood_pressure_rel = db.relationship('BloodPressureLog', backref='user', lazy='dynamic')
 
     #def __repr__(self):
     #    return "<User %r>" % self.username
