@@ -1,0 +1,30 @@
+:root {
+  --color-a: #CEF6D9;
+  --color-b: #3A5B40;
+  --background-image: url("../img/maria-shanina-3GrqSh8C4_E-unsplash.jpg");
+
+  --title-color: var(--color-a);
+  --title-bg-color: var(--color-b);
+  --title-border-color: var(--color-b);
+
+  --menu-link-color: var(--color-b);
+  --menu-border-color: var(--color-b);
+
+  --menu-link-hover-color: var(--color-a);
+  --menu-link-hover-bg-color: var(--color-b);
+
+  --form-label-color: var(--color-a);
+  --form-label-bg-color: var(--color-b);
+
+  --input-field-color: var(--color-b);
+  --input-field-bg-color: var(--color-a);
+
+  --static-table-data-color: var(--color-b);
+  --static-table-data-border-color: var(--color-a);
+
+  --static-table-header-color: var(--color-a);
+  --static-table-header-bg-color: var(--color-b);
+  --static-table-header-border-color: var(--color-a);
+
+  --main-container-text-block-text-color: var(--color-b);
+}

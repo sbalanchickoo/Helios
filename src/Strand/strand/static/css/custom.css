@@ -1,159 +1,178 @@
-.top-panel {
-    top: 0;
-    height: 100px;
-    width: 100%;
-    /*background: var(--header-bg-color);*/
+.left-panel {
+  width: 150px;
+  height: calc(100% - 10px);
+  position: fixed;
+  /*border: 1px solid blue;*/
 }
 
 .logo {
-  left: 0;
-  margin-top: 0px;
-  margin-left: 0px;
-  padding: 0%;
-  width: 200px;
-  position:fixed;
+  width: 150px;
+  height: 100px;
+  position: fixed;
+  /*border: 1px dotted blue;*/
+}
+
+.navbar {
+  height: calc(100% - 104px);
+  width: 150px;
+  position: fixed;
+  z-index: 1;
+  top: 102px;
+  overflow-x: hidden; /* Disable horizontal scroll*/
+  /*border: 1px solid red;*/
+}
+
+.main-container {
+  left: 150px;
+  padding-left: 150px;
+  position: fixed;
+  width: calc(100% - 160px);
+  height: 100%;
+  background-image: var(--background-image);
+  background-size: cover;
+  background-position: center center;
+  /*border: 1px solid red;*/
+}
+
+.menubar {
+  position: fixed;
+  right: 0px;
+  z-index: 1;
+  /*border: 1px solid black;*/
+}
+
+.main {
+  position: absolute;
+  top: 55px;
+  left: 0px;
+  padding-top: 35px;
+  width: calc(100% - 155px);
+  height: calc(100% - 100px);
+  /*border: 1px solid orange;*/
 }
 
 .footer-panel {
-    position: fixed;
+  position: fixed;
   bottom: 0;
   right: 0;
   margin-right: 5px;
 }
 
-.menubar {
-  float: right;
-}
-
-.main-container {
-    width: 100%;
-    height: 100%;
-    background-image: url("../img/dariusz-sankowski-unsplash.jpg");
-    background-size:100% 100%;
-}
-.main {
-  top: 100px;
-  left: 200px;
-  padding-left: 1%;
-  position: fixed;
-  width: 100%;
-    height: 100%;
-    background-image: url("../img/dariusz-sankowski-unsplash.jpg");
-    background-size:100% 100%;
-}
-
-/* The sidebar menu */
-.navbar {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 200px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 100px; /* Stay at the top */
-  left: 0;
-   /*#2B303A; /* Black */
-  overflow-x: hidden; /* Disable horizontal scroll */
-  border-right: 1px solid var(--sidebar-border-color);
+.logo {
+  background-color: var(--title-bg-color);
+  border-bottom: 1px solid var(--title-border-color);
 }
 
 .logo a, .logo a:hover, .logo a:active, .logo a:visited, .logo a:focus {
   text-decoration: none;
-  font: italic bold 50px 'Script MT', serif;
+  font: italic bold 48px 'Script MT', serif;
   color: var(--title-color);
 }
 
-
-/* Toolbar menu links */
-.menubar a, .menubar a:visited{
-  padding: 8px 16px 8px 16px;
-  margin-bottom: 4px;
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-top: 0px;
-  text-align: center;
-  float: left;
+.menubar a, .navbar a {
   display: block;
-  /*line-height: 18px;*/
-  border-radius: 5px 5px 5px 5px;
+  padding: 8px;
+  margin: 0px 4px 3px 3px;
+  font-size: 13px;
+  font-weight: bold;
   text-decoration: none;
-  font-size: 15px;
-  color: var(--sidebar-link-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--menu-link-color);
 }
 
-/* When you mouse over the toolbar links, change their color */
-.menubar a:hover{
+.menubar a {
+  text-align: center;
+  float: right;
+  border: 1px solid var(--menu-border-color);
+  border-radius: 5px 5px 5px 5px;
+}
+
+.navbar a {
+  text-align: left;
+  float: none;
+  border-top: 1px solid var(--menu-border-color);
+}
+
+.menubar a:hover, .navbar a:hover {
   color: var(--menu-link-hover-color);
   background: var(--menu-link-hover-bg-color);
 }
-
 
 html {
   font: 'Arial';
 }
 
 body {
-    font: 16px/26px Calibri, Helvetica Neue, Arial;
+  font: 16px/26px Calibri, Helvetica Neue, Arial;
 }
-/* Form errors */
+
 .error-text {
   color: red;
 }
 
+.form-field-label {
+  padding: 2px 5px;
+  background-color: var(--form-label-bg-color);
+  color: var(--form-label-color);
+  border-top: 1px solid var(--form-label-color);
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 
-/* The sidebar menu links */
-.navbar a, .navbar a:visited{
-  display: block;
-  padding: 8px 8px 8px 8px;
-  margin-bottom: 4px;
-  margin-left: 3px;
-  margin-right: 3px;
-  color: var(--sidebar-link-color);
-  border-radius: 5px 5px 5px 5px;
-  border-top: 1px solid var(--sidebar-border-color);
-  font-size: 12px;
+}
+
+.form-field {
+  padding: 2px 5px;
+  width: 50px;
+  font-size: 13px;
+  font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-/* When you mouse over the sidebar links, change their color */
-.navbar a:hover{
-  color: var(--menu-link-hover-color);
-  background: var(--menu-link-hover-bg-color);
-}
-
-/* Toolbar menu */
-
-table, td {
-  border-left: 0.5px solid #C0C0C0;
-  border-bottom: 0.5px solid #C0C0C0;
-  padding: 2px 5px;
-  border-collapse: collapse;
-}
-
-.form-field-label {
-  border-left: 0.5px solid #C0C0C0;
-  border-bottom: 0.5px solid #C0C0C0;
-  padding: 2px 5px;
-  background-color: #AA6C5C;
-  color: white;
-  font-weight: bold;
-}
-
-.form-field {
-  padding: 2px 5px;
-  background-color: #FFF7ED;
-  color: black;
-}
-
 input[type=text] {
-  border-left: 0.5px solid #C0C0C0;
-  border-bottom: 0.5px solid #C0C0C0;
-  padding: 2px 5px;
-  border: none;
-  background-color: #FFF7ED;
-  color: black;
+  width: 150px;
 }
 
-.entry-header {
-  color: white;
+.static-table-data {
+  color: var(--static-table-data-color);
+  border: 1px solid var(--static-table-data-border-color);
+  padding: 0px 4px 0px 4px;
+}
+
+.static-table-header {
+  padding: 2px 5px;
+  color: var(--static-table-header-color);
+  background-color: var(--static-table-header-bg-color);
+  border: 1px solid var(--static-table-header-border-color);
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/*** index.html ***/
+.main-container-text-block {
+  width: 350px;
+  height: 100%;
+  /*border: 1px solid blue;*/
+}
+
+.main-container-text-block-text {
+  margin-left: 100px;
+  margin-top: 45px;
+  color: var(--main-container-text-block-text-color);
+}
+
+/*** logging pages ***/
+.main-container-log-block {
+  position: fixed;
+  margin-top: 10px;
+  margin-left: 10px;
+  /*border: 1px solid blue;*/
 }
