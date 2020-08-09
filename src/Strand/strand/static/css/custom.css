@@ -111,6 +111,11 @@ body {
   color: red;
 }
 
+.error {
+    color: red;
+    border-color: blue;
+}
+
 .form-field-label {
   padding: 2px 5px;
   background-color: var(--form-label-bg-color);
@@ -121,7 +126,6 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 2px;
-
 }
 
 .form-field {

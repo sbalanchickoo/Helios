@@ -27,6 +27,10 @@ class BloodPressureLog(db.Model):
     def all():
         return BloodPressureLog.query.order_by(desc(BloodPressureLog.date))
 
+    @staticmethod
+    def get_by_date(date_string):
+        return BloodPressureLog.query.filter(BloodPressureLog.date == date_string)
+
 
 # def __repr__(self):
 #    return "<Bookmark '{}: '{}'>".format(self.description, self.url)

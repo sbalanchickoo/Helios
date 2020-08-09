@@ -4,7 +4,7 @@ from wtforms.validators import DataRequired, NumberRange, ValidationError
 from datetime import datetime
 
 
-class BloodPressureForm(Form):
+class ExerciseMetadataForm(Form):
     systolic = IntegerField(label='Blood pressure (systolic) '
                                , validators=[DataRequired(), NumberRange(min=0, max=200)])
     diastolic = IntegerField(label='Blood pressure (diastolic) '

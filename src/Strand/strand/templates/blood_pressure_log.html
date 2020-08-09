@@ -15,7 +15,16 @@
             {{ render_field(form.date, size=50) }}
             {{ render_field(form.notes, size=50) }}
         </table>
-        <button>Submit</button>
+        <div class="panel-body">
+          <input type ="submit" name="action" value="Submit">
+      </div>
+      <div class="panel-body">
+          <input type ="submit" name="action" value="Histogram">
+      </div>
+      <div class="panel-body">
+          <input type ="submit" name="action" value="Search">
+      </div>
+        <!--<button>Submit</button>-->
     <h1 class="entry-header">Recent entries</h1>
         <table>
             <tr>
