@@ -1,0 +1,875 @@
+<html lang="en"><!--<![endif]--><head class="at-element-marker">
+<script async="" src="//bat.bing.com/bat.js"></script><script async="" src="//static.ads-twitter.com/uwt.js"></script><script async="" src="https://connect.facebook.net/signals/config/480805658789302?v=2.9.27&amp;r=stable"></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script>
+      (function() {
+        window.consentCookieName = 'hl_cookie_consent';
+        if (document.cookie.indexOf(window.consentCookieName) === -1) {
+          var cookieValue = { ao: true, tp: true, cb: false };
+          var expires = new Date();
+          expires.setDate(expires.getDate() + 365);
+          cookieValue = JSON.stringify(cookieValue);
+          document.cookie =
+            window.consentCookieName +
+            '=' +
+            cookieValue +
+            '; expires=' +
+            expires.toGMTString() +
+            '; path=/;domain=hl.co.uk';
+          window.consentCookieValue = JSON.parse(cookieValue);
+        } else {
+          var match = document.cookie.match(new RegExp('(^| )' + window.consentCookieName + '=([^;]+)'));
+          window.consentCookieValue = JSON.parse(match[2]);
+        }
+      })();
+    </script>
+<script src="//assets.adobedtm.com/9c230ad0b94d/a9a98aee1653/launch-e689a81c7007.min.js"></script><script async="" src="https://assets.adobedtm.com/9c230ad0b94d/a9a98aee1653/9c8e0724b9b6/EX4baef57bd0774436a77679857b2cb2dd-libraryCode_source.min.js"></script><script>
+function getTheSourceByParam() {
+  var regexS = "[\\?&]" + "theSource" + "=([^&#]*)";
+  var regex = new RegExp(regexS);
+  var results = regex.exec(window.location.href);
+  if (results == null) {
+      return "";
+  } else {
+      return results[1];
+  }
+}
+
+function getTheSourceByCookie() {
+  if (document.cookie.length > 0) {
+      c_start = document.cookie.indexOf("theSource" + "=");
+      if (c_start != -1) {
+          c_start = c_start + "theSource".length + 1;
+          c_end = document.cookie.indexOf(";", c_start);
+          if (c_end == -1) {
+              c_end = document.cookie.length;
+          }
+          return unescape(document.cookie.substring(c_start, c_end));
+      }
+  }
+  return '';
+}
+
+function targetPageParamsAll() { 
+    var mbox_marketing_url= window.url_marketing || 'www.hl.co.uk';
+    var mbox_trading_url= window.url_trading || 'online.hl.co.uk';
+    var sourceCode = getTheSourceByParam() || getTheSourceByCookie() || "";
+    var loggedIn = document.cookie.search(/\b__dat\b/) != -1 && document.cookie.search(/\b__dat_ses\b/) != -1 ? 1 : 0;
+    var getCookieVal=function(n){return(v=new RegExp('^'+n+'=.*|;\\s*'+n+'=.*').exec(document.cookie))?v[0].split('=')[1].split(';')[0]:''};
+    var getInvestCookie = function() {
+      return getCookieVal('invest') !== '' && (JSON.parse(getCookieVal('invest')).investment.length > 0 || JSON.parse(getCookieVal('invest')).vmp_matrix !== '');
+    }  
+
+    return 'profile.VisitorProfile='+ getCookieVal('s_v32') + (sourceCode ? '&profile.theSource=' + sourceCode : '') + '&trading_url=' + mbox_trading_url + '&marketing_url=' + mbox_marketing_url + '&loggedIn=' + loggedIn + '&profile.hasInvestCookie='+getInvestCookie();
+}
+</script><style class="at-flicker-control" id="at-makers-style">
+.mboxDefault {visibility: hidden;}
+</style><script>_satellite["__runScript1"](function(event, target) {
+var _gaq = _gaq || [];
+});</script><title>Watchlists | Keep track of funds, shares and other investments</title>
+<meta content="Use our free watchlists tool to keep track of a range of investments. Plus, sync your watchlists with your mobile app for iPhone and Android." name="Description"/>
+<meta content="watchlists,Hargreaves,Lansdown" name="Keywords"/>
+<meta content="2019-09-09" name="Published_Date"/>
+<meta content="on" http-equiv="x-dns-prefetch-control"/>
+<link href="https://online.hl.co.uk" rel="dns-prefetch"/>
+<link href="https://ssc.hl.co.uk" rel="dns-prefetch"/>
+<link href="https://cdn.tt.omtrdc.net" rel="dns-prefetch"/>
+<link href="https://hargreaveslansdownpl.tt.omtrdc.net" rel="dns-prefetch"/>
+<link href="https://connect.facebook.net" rel="dns-prefetch"/>
+<link href="https://ssl.google-analytics.com" rel="dns-prefetch"/>
+<link href="https://www.googleadservices.com" rel="dns-prefetch"/>
+<link href="https://googleads.g.doubleclick.net" rel="dns-prefetch"/>
+<link href="https://ping.chartbeat.net" rel="dns-prefetch"/>
+<link href="https://a248.e.akamai.net" rel="dns-prefetch"/>
+<link href="https://fonts.googleapis.com" rel="dns-prefetch"/>
+<link href="https://fonts.gstatic.com" rel="dns-prefetch"/>
+<link href="https://stats.g.doubleclick.net" rel="dns-prefetch"/>
+<link href="https://static.ads-twitter.com" rel="dns-prefetch"/>
+<link href="https://t.co" rel="dns-prefetch"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="Hargreaves Lansdown" name="application-name"/>
+<meta content="#356bb9" name="msapplication-TileColor"/>
+<meta content="https://www.hl.co.uk/__data/assets/image/0011/6917159/hl-circle.png" name="msapplication-TileImage"/>
+<meta content="https://www.hl.co.uk" name="msapplication-starturl"/>
+<meta content="#000065" name="msapplication-navbutton-color"/>
+<meta content="https://www.hl.co.uk/__data/assets/image/0011/6917159/hl-circle.png" name="msapplication-square150x150logo"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@HLInvest" name="twitter:site"/>
+<meta content="Watchlists" name="twitter:title"/>
+<meta content="Use our free watchlists tool to keep track of a range of investments. Plus, sync your watchlists with your mobile app for iPhone and Android." name="twitter:description"/>
+<meta content="@HLInvest" name="twitter:creator"/>
+<meta content="https://www.hl.co.uk/__data/assets/image/0003/12489402/hl-shareable.png" name="twitter:image:src"/>
+<meta content="www.hl.co.uk" name="twitter:domain"/>
+<meta content="Watchlists" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="https://www.hl.co.uk/watchlists" property="og:url"/>
+<meta content="https://www.hl.co.uk/__data/assets/image/0003/12489402/hl-shareable.png" property="og:image"/>
+<meta content="Use our free watchlists tool to keep track of a range of investments. Plus, sync your watchlists with your mobile app for iPhone and Android." property="og:description"/>
+<meta content="Hargreaves Lansdown" property="og:site_name"/>
+<meta content="254889968011406" property="fb:app_id"/>
+<meta content="139193179458411" property="fb:pages"/>
+<link href="https://www.hl.co.uk/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed"/>
+<link href="https://www.hl.co.uk/touch-icon-ipad-retina-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+<meta content="HL.co.uk" name="apple-mobile-web-app-title"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<script type="text/javascript">if(document.cookie.search(/\bhl_rs\b/)!=-1){var initScale=document.documentElement.clientWidth/1300;if(document.documentElement.clientWidth!=window.innerWidth){initScale=window.innerWidth/1300}document.querySelector('meta[name="viewport"]').setAttribute("content","width=1300px, initial-scale="+(initScale>1?1:initScale))}</script> <link href="https://www.hl.co.uk/watchlists" rel="canonical"/>
+<meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+<link href="https://www.hl.co.uk/__data/assets/file/0019/16750/favicon.ico" rel="shortcut icon"/>
+<!-- CSS -->
+<link href="/__zzz/10080/16151779_12504481.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com/css?family=Oswald:500|Playfair+Display&amp;display=swap" rel="stylesheet"/>
+<!--[if lte IE 8]>
+   <script type="text/javascript" src="//www.hl.co.uk/__zzz/10080/9591159_9589273.js"></script>
+   <link rel="stylesheet" type="text/css" href="//www.hl.co.uk/__zzz/10080/12472001.css" media="all" />
+<![endif]--><script type="text/javascript">
+ //<![CDATA[
+  var trackingobj = {
+   "content_type":"unassigned",
+   "content_name":"ID-8466228",
+   "user_site":"marketing",
+   "responsive": typeof window.innerWidth != "undefined" ? window.innerWidth < 980 : false,
+   "page_source": ""
+  }
+ //]]>
+</script><script>
+    var navTrail;
+    var _sf_startpt=(new Date()).getTime();
+    var logged_in = (document.cookie.search(/\b__dat\b/)!=-1 && document.cookie.search(/\b__dat_ses\b/)!=-1) ? true : false;
+    var remembered_login = (document.cookie.search(/\b__rs\b/)!=-1) ? true : false;
+    var url_marketing = 'www.hl.co.uk';
+    var url_trading = 'online.hl.co.uk';
+    var STREAM_URL = 'https://stream.hl.co.uk';
+    function whenAvailable(a,b){
+        window.setTimeout(function(){
+            if(window[a]){
+                b(window[a]);
+            } else {
+                window.setTimeout(arguments.callee,50);
+            }
+        },50);
+    }
+</script>
+<script src="/__zzz/120/14790961_12414388.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+	if(document.cookie.length > 0) {
+		var cStart = document.cookie.indexOf("vpOnly=");
+		if(cStart != -1){
+			cStart = cStart + 'vpOnly'.length + 1;
+			var cEnd = document.cookie.indexOf(";",cStart);
+			if(cEnd == -1){
+				cEnd = document.cookie.length;
+			}
+			if(unescape(document.cookie.substring(cStart,cEnd)) == 'Y'){
+				document.location = 'http://'+url_trading+'/my-accounts/virtual_portfolio';
+			}
+		}
+	}
+//]]>
+</script>
+<link href="/__zzz/60/9631756.css" media="print" rel="stylesheet" type="text/css"/>
+<link href="/__zzz/60/8578073.css" rel="stylesheet" type="text/css"/><meta content="app-id=450465506" name="apple-itunes-app"/>
+<meta content="app-id=com.mubaloo.android.hargreaveslansdown" name="google-play-app"/>
+<style>.smartbanner-show{margin-top:80px}.smartbanner-show .smartbanner{display:block} .smartbanner{position:absolute;left:0;top:0;display:none;width:100%;height:80px;line-height:80px;font-family:'Helvetica Neue',sans-serif;background:#f2f2f2;z-index:9998;-webkit-font-smoothing:antialiased;overflow:hidden;-webkit-text-size-adjust:none;margin-top:-80px}.smartbanner-container{margin:0 auto;white-space:nowrap}.smartbanner-close{display:inline-block;vertical-align:middle;margin:0 5px 0 5px;font-family:'ArialRoundedMTBold',Arial;font-size:20px;text-align:center;color:#888;text-decoration:none;border:0;border-radius:14px;-webkit-font-smoothing:subpixel-antialiased}.smartbanner-close:active,.smartbanner-close:hover{color:#aaa}.smartbanner-icon{display:inline-block;vertical-align:middle;width:57px;height:57px;margin-right:12px;background-size:cover;border-radius:10px}.smartbanner-info{display:inline-block;vertical-align:middle;width:44%;font-size:11px;line-height:1.2em;font-weight:bold}.smartbanner-title{font-size:13px;line-height:18px}.smartbanner-button{position:absolute;right:20px;top:0;bottom:0;margin:auto 0;height:24px;font-size:16px;line-height:24px;text-align:center;color:#0077ff;text-decoration:none;text-shadow:0 1px 0 rgba(255,255,255,0.8)}.smartbanner-button:active,.smartbanner-button:hover{color:#aaa}.smartbanner-ios{background:#f4f4f4;box-shadow:0 1px 2px rgba(0,0,0,0.5);line-height:80px}.smartbanner-ios .smartbanner-close{border:0;width:18px;height:18px;line-height:18px;color:#888;text-shadow:0 1px 0 white}.smartbanner-ios .smartbanner-close:active,.smartbanner-ios .smartbanner-close:hover{color:#aaa}.smartbanner-ios .smartbanner-icon{background:rgba(0,0,0,0.6);background-size:cover;box-shadow:0 1px 3px rgba(0,0,0,0.3)}.smartbanner-ios .smartbanner-info{color:#6a6a6a;text-shadow:0 1px 0 rgba(255,255,255,0.8)}.smartbanner-ios .smartbanner-title{color:#4d4d4d;font-weight:bold}.smartbanner-ios .smartbanner-button{padding:0 10px;min-width:10%;color:#0077ff}.smartbanner-ios .smartbanner-button:active,.smartbanner-ios .smartbanner-button:hover{background:#dcdcdc;background:linear-gradient(to bottom,#dcdcdc,#efefef)} .smartbanner-android{background:#3d3d3d url(data:image/gif;base64,R0lGODlhCAAIAIABAFVVVf///yH5BAEHAAEALAAAAAAIAAgAAAINRG4XudroGJBRsYcxKAA7);box-shadow:inset 0 4px 0 #88b131;line-height:82px}.smartbanner-android .smartbanner-close{border:0;width:17px;height:17px;line-height:17px;margin-right:7px;color:#b1b1b3;background:#1c1e21;text-shadow:0 1px 1px #000;box-shadow:0 1px 2px rgba(0,0,0,0.8) inset,0 1px 1px rgba(255,255,255,0.3)}.smartbanner-android .smartbanner-close:active,.smartbanner-android .smartbanner-close:hover{color:#eee}.smartbanner-android .smartbanner-icon{background-color:transparent;box-shadow:none}.smartbanner-android .smartbanner-info{color:#ccc;text-shadow:0 1px 2px #000}.smartbanner-android .smartbanner-title{color:#fff;font-weight:bold}.smartbanner-android .smartbanner-button{min-width:12%;color:#d1d1d1;padding:0;background:none;border-radius:0;box-shadow:0 0 0 1px #333,0 0 0 2px #dddcdc}.smartbanner-android .smartbanner-button:active,.smartbanner-android .smartbanner-button:hover{background:none}.smartbanner-android .smartbanner-button-text{text-align:center;display:block;padding:0 10px;background:#42b6c9;background:linear-gradient(to bottom,#42b6c9,#39a9bb);text-transform:none;text-shadow:none;box-shadow:none}.smartbanner-android .smartbanner-button-text:active,.smartbanner-android .smartbanner-button-text:hover{background:#2ac7e1} .smartbanner-windows{background:#f4f4f4;background:linear-gradient(to bottom,#f4f4f4,#cdcdcd);box-shadow:0 1px 2px rgba(0,0,0,0.5);line-height:80px}.smartbanner-windows .smartbanner-close{border:0;width:18px;height:18px;line-height:18px;color:#888;text-shadow:0 1px 0 white}.smartbanner-windows .smartbanner-close:active,.smartbanner-windows .smartbanner-close:hover{color:#aaa}.smartbanner-windows .smartbanner-icon{background:rgba(0,0,0,0.6);background-size:cover;box-shadow:0 1px 3px rgba(0,0,0,0.3)}.smartbanner-windows .smartbanner-info{color:#6a6a6a;text-shadow:0 1px 0 rgba(255,255,255,0.8)}.smartbanner-windows .smartbanner-title{color:#4d4d4d;font-weight:bold}.smartbanner-windows .smartbanner-button{padding:0 10px;min-width:10%;color:#6a6a6a;background:#efefef;background:linear-gradient(to bottom,#efefef,#dcdcdc);border-radius:3px;box-shadow:inset 0 0 0 1px #bfbfbf,0 1px 0 rgba(255,255,255,0.6),0 2px 0 rgba(255,255,255,0.7) inset}.smartbanner-windows .smartbanner-button:active,.smartbanner-windows .smartbanner-button:hover{background:#dcdcdc;background:linear-gradient(to bottom,#dcdcdc,#efefef)}</style>
+<!-- META DATA PLACEHOLDER -->
+<!-- Google Tracking Code -->
+<!--[if IE 8]>
+   <script type="text/javascript" src="/__zzz/1440/9591159.js"></script>
+   <script type="text/javascript" src="/__zzz/1440/9589273.js"></script>
+<![endif]-->
+<!--[if IE 7]>
+  <script type="text/javascript" src="/__zzz/1440/9591159.js"></script>
+  <script type="text/javascript" src="/__zzz/1440/9589273.js"></script>
+<![endif]-->
+<!--
+  Running MySource Matrix
+  Developed by Squiz - http://www.squiz.net
+  MySource, MySource Matrix and Squiz.net are registered Trademarks of Squiz Pty Ltd
+  Page generated: 21 October 2020 22:55:34
+-->
+<script async="" src="https://assets.adobedtm.com/9c230ad0b94d/a9a98aee1653/9c8e0724b9b6/RC540597725dde40fc924bc6efbbce15c8-source.min.js"></script><script async="" src="https://assets.adobedtm.com/9c230ad0b94d/a9a98aee1653/9c8e0724b9b6/RC5f545538d13a4cdbb06807c997a04250-source.min.js"></script><script async="" src="https://assets.adobedtm.com/9c230ad0b94d/a9a98aee1653/9c8e0724b9b6/RC82b129aad90f44dab1150270178b955d-source.min.js"></script><script async="" src="//www.googleadservices.com/pagead/conversion_async.js"></script><script async="" src="//platform.twitter.com/oct.js"></script><script src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1010707160/?random=1603317336752&amp;cv=9&amp;fst=1603317336752&amp;num=1&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;u_h=720&amp;u_w=1280&amp;u_ah=680&amp;u_aw=1280&amp;u_cd=24&amp;u_his=6&amp;u_tz=60&amp;u_java=false&amp;u_nplug=3&amp;u_nmime=4&amp;sendb=1&amp;ig=1&amp;frm=0&amp;url=https%3A%2F%2Fwww.hl.co.uk%2Fwatchlists&amp;ref=https%3A%2F%2Fonline.hl.co.uk%2Fmy-accounts&amp;tiba=Watchlists%20%7C%20Keep%20track%20of%20funds%2C%20shares%20and%20other%20investments&amp;hn=www.googleadservices.com&amp;async=1&amp;rfmt=3&amp;fmt=4"></script></head>
+<body class="vtC vt22 vt70 modal-window" style="">
+<!-- CONTAINER -->
+<!-- HEADER -->
+<script type="text/javascript">
+  var cTre = new RegExp("s_v32=([^;]+)");
+  var cTCookie = cTre.exec(document.cookie);
+  var cT =
+    document.location.search.split("vt=").length > 1
+      ? document.location.search
+          .split("vt=")[1]
+          .split("&")[0]
+          .toUpperCase()
+      : cTCookie != null
+      ? String(unescape(cTCookie[1]))
+          .toUpperCase()
+          .charAt(0)
+      : "P";
+  document.body.className += " vt" + cT;
+
+  if (window.atob) {
+    var vTre = new RegExp("hlVT=([^;]+)");
+    var vtCookie = vTre.exec(document.cookie);
+    if (vtCookie) {
+      var vt = window.atob(String(unescape(vtCookie[1]))).split(/[A-Z]/gi);
+      for (var i = 0; i < vt.length; i++)
+        if (!isNaN(vt[i])) {
+          document.body.className += " vt" + vt[i];
+        }
+    }
+  }
+  if (document.location.search.indexOf("partners=1") > -1)
+    document.body.className += " vtEC";
+</script>
+<style>
+  .alertStrip {
+    position: relative;
+    padding-left: 30px;
+  }
+  .alertStrip:before {
+    content: "";
+    width: 22px;
+    height: 22px;
+    background-image: url("https://www.hl.co.uk/__data/assets/image/0010/15717997/green-info-icon.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+.headerTopIcon{list-style:none;padding:0;position:absolute}.headerTopIcon__bhm{max-height:38px;margin:8px 0 0 0;padding-bottom:5px;max-width:160px;font-size:15px;line-height:1.1;border:none;background-image:url(https://www.hl.co.uk/__data/assets/image/0009/16195338/DesktopBar-150x3.png);background-size:contain;background-position:bottom;background-repeat:no-repeat}.bhmTextHighlight{font-weight:700}.topNavIcon__bhm{list-style:none;border:none;background-image:url(https://www.hl.co.uk/__data/assets/image/0007/16195336/MobileBar-6x1002.png);background-size:auto;background-position:left;background-repeat:no-repeat}.topNavIcon__bhm.-small{max-height:35px;position:relative;float:left;font-size:.55rem;line-height:1.15;margin:0 -17px 0 5px;padding-left:6px}@media print,screen and (min-width:375px){.topNavIcon__bhm.-small{max-height:35px;float:left;font-size:12px;line-height:1;margin:0 0 0 5px;padding:0;padding-left:6px}}.topNavIcon__bhm.-medium{max-height:44px;position:absolute;top:-62px;left:157px;width:94px;margin:0;margin-left:5px;padding:0;padding-left:6px;font-size:14px;line-height:1.1}
+ 
+a.headerTopIcon__link {
+  text-decoration: none;
+  color: #000000;
+}
+
+a.topNavIcon__link {
+  text-decoration: none;
+  color: #000000;
+}
+
+
+</style>
+<div class="backgroundGrey05" id="alertStrip" style="padding: 12px 0; z-index: 910; position: relative;">
+<div class="container">
+<div class="row">
+<div class="columns">
+<div class="alertStrip">
+<p class="fontBody2" style="font-size: 15px;">
+<span style="font-weight: 700;">Coronavirus - we're here to help</span>
+<br/>
+            From how to access your account online, scam awareness, your
+            wellbeing and our community we're
+            <a href="https://www.hl.co.uk/features/coronavirus-information-and-updates" onclick="if(typeof(scto)!='undefined'){scto.adv_trackevent('content','internal','coronavirus_banner|click_ex-page|coronavirus link')};">here to help.</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<header>
+<div class="skipNav">
+<a href="#mainContent">Skip to main content</a>
+</div>
+<div class="pageLoadingBar">
+<div class="pageLoadingBar__bar -complete" id="pageLoadingBar"></div>
+</div>
+<div class="headerTop">
+<div class="container">
+<ul class="headerTopIcon small-hide medium-hide">
+<li class="headerTopIcon__bhm">
+<a class="headerTopIcon__link" href="https://www.hl.co.uk/corporate-social-responsibility/diversity">
+                HL celebrates<br/><span class="bhmTextHighlight">Black History Month</span>
+</a>
+</li>
+</ul>
+<ul class="headerTopList">
+<li class="headerTopList__item" id="headerTopList_register" style="display: none;">
+<a class="headerTopList__link" href="https://online.hl.co.uk/my-accounts/registration">Register</a>
+</li>
+<li class="headerTopList__item" id="watchlistWidget__link">
+<a class="headerTopList__link headerTopList__watchlist -is-loggedin" href="https://www.hl.co.uk/watchlists" id="watchlistWidget__linkCopy">My watchlists</a>
+<div class="watchlistWidget" id="watchlistWidget"></div>
+</li>
+<li class="headerTopList__item">
+<a class="headerTopList__link" href="https://www.hl.co.uk/help">Help</a>
+</li>
+<li class="headerTopList__item">
+<a class="headerTopList__link -is-last" href="https://www.hl.co.uk/contact-us">Contact us</a>
+</li>
+<li class="headerTopList__item">
+<a class="headerTopList__logout -is-loggedin" href="https://online.hl.co.uk/my-accounts/login/forms/1002" id="headerTopList__logout">
+<img alt="Log out of your HL account" id="headerTopList__logoutImg" src="https://online.hl.co.uk/content/access/loginstatus"/>
+</a>
+<script>
+            (function() {
+              var timeStamp = navigator.userAgent.match(/(iPad|iPhone|iPod)/g)
+                ? "?" + new Date().getTime()
+                : "";
+              document.getElementById("headerTopList__logoutImg").src =
+                "https://online.hl.co.uk/content/access/loginstatus" +
+                timeStamp;
+                // Changes alt tag on logout button
+                if (logged_in) {
+                    document.getElementById("headerTopList__logoutImg").setAttribute("alt", "Log out of your HL account");
+                }
+            })();
+          </script>
+</li>
+</ul>
+</div>
+</div>
+<div class="headerMain">
+<div class="container">
+<nav class="topNav" id="topNav">
+<ul class="topNav__items" id="topNavItems">
+<li class="topNav__logo">
+<a accesskey="0" href="/">
+<svg aria-labelledby="logoTitle" class="topNav__logoLarge" viewbox="0 0 493.8 143.5" width="400" xmlns="http://www.w3.org/2000/svg">
+<title id="logoTitle">Hargreaves Lansdown</title>
+<path d="M243.8 85.9c-4.7-3.8-11.2-5.4-21.1-5.4h-22l3.1 10.6v50.7h18c7.1 0 12.7-.9 16.9-2.9 9.4-4.2 13.8-13.1 13.8-27.9 0-12.3-2.7-20.3-8.7-25.1zm-9.7 44.5c-2.8 1.8-7 2.8-12 2.8h-6.9V89h5.8c6.4 0 10.8 1 13.6 3 4.3 3 6 8.4 6 18.8.1 10.7-1.9 16.5-6.5 19.6zm129.7-7.8c-.1.5-.3 1.1-.4 1.7-.1-.5-.3-1.1-.5-1.7l-12.2-42.2h-10.9l3.3 11-9.8 31.6c-.1.4-.2.7-.3 1.1-.1-.5-.2-.9-.4-1.4l-12.4-42.4h-11.3l18.3 61.2h10.2l10.4-34.2 9.9 34.2h10.6L386 80.3h-10.8l-11.4 42.3zM75 80.4H57l3.1 10.4-16.7 50.8h11.3l4.2-13.1h22l4.5 13.1h11.7L75 80.4zm-13.1 38.8l7.2-22.5c.2-.4.3-1 .4-1.5.1.6.3 1.1.5 1.6l7.8 22.4H61.9zm222-39.6c-16.4 0-25.4 11.2-25.4 31.4 0 20.3 9 31.4 25.4 31.4s25.4-11.2 25.4-31.4-9-31.4-25.4-31.4zm0 53.9c-5.8 0-13.6-2.3-13.6-22.4s7.8-22.4 13.6-22.4 13.6 2.3 13.6 22.4-7.7 22.4-13.6 22.4zM3.2 80.5v61.2h35.1l2.8-8.5H14.6V80.5zm135.9 40.9c-.5-.9-1.1-1.8-1.9-2.9l-27.3-38.1h-11l3.1 10.5v50.8h10v-40.9c.5.9 1 1.8 1.7 2.7l27.3 38.1h8.1V80.3h-10v41.1zm289 .1c-.5-.9-1.1-1.8-1.9-2.9l-27.3-38.1H391v61.3h10v-40.9c.5.9 1 1.8 1.7 2.7l27.3 38.1h8.1V80.4h-13.2l3.1 10.5.1 30.6zm-248.4-15.7c-6.3-2.2-11.8-4.2-11.8-9.8 0-6.6 7.1-7.6 11.3-7.6 3.8 0 7.9.7 11.8 2.1l2.8-8.4-.6-.2c-3.9-1.3-9.9-2.2-14.6-2.2-13.3 0-21.6 6.7-21.6 17.6 0 12.3 9.3 15.5 17.5 18.4 6.5 2.3 12.1 4.3 12.1 10.2 0 5.1-4.3 8.1-11.7 8.1-4.7 0-10.2-1.4-14.7-3.6l-2.9 8.7.5.2c5.2 2.2 11.4 3.5 17.4 3.5 7.5 0 13.5-1.9 17.3-5.5 3.2-3.1 4.9-7.3 4.9-12.3.1-13-9.4-16.3-17.7-19.2M86.3 1.5h-18L71.4 12 54.7 62.9H66l4.2-13.1h22l4.5 13.1h11.7L86.3 1.5zM73.1 40.4l7.2-22.5c.2-.4.3-1 .4-1.6.1.6.3 1.1.5 1.6L89 40.4H73.1zM340.9 1.5h-18L326 12l-16.7 50.9h11.3l4.2-13.1h22l4.5 13.1H363L340.9 1.5zm-13.1 38.9l7.2-22.5c.2-.4.3-1 .4-1.6.1.6.3 1.1.5 1.6l7.8 22.5h-15.9zm58.9 22.5l18.2-61.4h-11.3L382 44.6l-.6 2.1-.6-2.1-14.6-43.1h-11.9l20.9 61.4h11.5zM191 32.3l2.4 8.1h6.2v11c-3.2 2.3-6.5 3.3-10.4 3.3-10.1 0-15-7.6-15-23.2 0-14.1 5-21.9 14-21.9 5.9 0 9.2 2.9 10.9 9.5l.2.7 11.5-2-.1-.8C208.7 6.6 200.6.6 188.5.6c-16.5 0-26 11.5-26 31.5 0 20.4 8.9 31.6 25.1 31.6 5.9 0 10.8-1.4 14.7-4.3l2 3.4h6.7V32.3h-20zm-34.1 22c-1.9 0-3.5-.7-4.8-2.9l.9 1.6-1-1.7-.2-.4-4.8-8.6-2-3.6c8.1-2.7 12.4-9 12.4-18.5 0-6.3-2.3-11.3-6.7-14.4-4-2.9-9.5-4.2-17.8-4.2h-22.6l3.1 10.6V63h11.4V40.4h8.6l2.3 4 1.6 2.8 4.7 8c3.4 5.7 6.3 8.5 11.4 8.5 2.2 0 4-.6 5.9-1.3v-8.5c-.9.2-1.7.4-2.4.4zm-23.3-22h-8.9V10.1h7.3c5.6 0 9.1.8 11.1 2.7 1.8 1.7 2.7 4.5 2.7 8 0 7.8-3.9 11.5-12.2 11.5zm128.6 22c-1.9 0-3.5-.7-4.8-2.9l.9 1.6-1-1.7-.2-.4-4.8-8.6-2-3.6c8.1-2.7 12.4-9 12.4-18.5 0-6.3-2.3-11.3-6.7-14.4-4-2.9-9.5-4.2-17.8-4.2h-22.6l3.1 10.6V63h11.4V40.4h8.6l2.3 4 1.6 2.8 4.7 8c3.4 5.7 6.3 8.5 11.4 8.5 2.2 0 4-.6 5.9-1.3v-8.5c-.8.2-1.6.4-2.4.4zm-23.2-22h-8.9V10.1h7.3c5.6 0 9.1.8 11.1 2.7 1.8 1.7 2.7 4.5 2.7 8-.1 7.8-3.9 11.5-12.2 11.5zM37.9 1.5v26.2H14.7V1.5H.2l3.1 10.6v50.8h11.4V37h23.2v25.9h11.4V1.5zM475.2 27c-6.3-2.2-11.8-4.2-11.8-9.8 0-6.6 7.1-7.6 11.3-7.6 3.8 0 7.9.7 11.8 2.1l2.8-8.4-.6-.2c-3.9-1.3-9.9-2.2-14.6-2.2-13.3 0-21.6 6.7-21.6 17.6 0 12.3 9.3 15.6 17.5 18.5 6.5 2.3 12.1 4.3 12.1 10.2 0 5.2-4.3 8.1-11.7 8.1-4.7 0-10.2-1.4-14.7-3.6l-2.9 8.7.5.2c5.2 2.2 11.4 3.5 17.4 3.5 7.5 0 13.5-1.9 17.3-5.5 3.2-3.1 4.9-7.3 4.9-12.4 0-13-9.4-16.3-17.7-19.2M409.9 1.4v61.5h35.7l2.8-8.6h-27.2V35.9H442l2.5-8.4h-23.3V9.9H447l2.5-8.5zm-137.5 0v61.5h31.9l2.8-8.6h-23.4V35.9h20.8l2.4-8.4h-23.2V9.9h25.8l2.5-8.5z" fill="#071d49"></path>
+</svg>
+<svg aria-labelledby="logoTitleSml" class="topNav__logoSmall" viewbox="0 0 190 117.8" width="400" xmlns="http://www.w3.org/2000/svg">
+<title id="logoTitleSml">Hargreaves Lansdown</title>
+<path d="M116.8 0v117.8h67.8l5.4-16.4h-51.2V0zM73.1 0v50.1H28.3V0H.4l6 20.3v97.5h21.9V68.1h44.8v49.7h22V0z" fill="#141f48"></path>
+</svg>
+</a>
+</li>
+<li class="topNavIcon__bhm -small medium-hide large-hide">
+<a class="topNavIcon__link" href="https://www.hl.co.uk/corporate-social-responsibility/diversity">
+                  HL celebrates<br/><span class="bhmTextHighlight">Black History <br/>Month</span>
+</a>
+</li>
+<li class="topNavIcon__bhm -medium small-hide large-hide">
+<a class="topNavIcon__link" href="https://www.hl.co.uk/corporate-social-responsibility/diversity">
+                HL celebrates<br/><span class="bhmTextHighlight">Black History Month</span>
+</a>
+</li>
+<li class="topNav__item -has-megaMenu" id="nav16508">
+<a class="topNav__link 0 -first" href="https://www.hl.co.uk/investment-services" onclick="if(typeof(scto)!='undefined'){scto.adv_trackevent('navigation','our services:ribbon')}">Our services</a>
+<div class="megaMenu"></div>
+</li>
+<li class="topNav__item -has-megaMenu" id="nav16512">
+<a class="topNav__link 0" href="https://www.hl.co.uk/funds" onclick="if(typeof(scto)!='undefined'){scto.adv_trackevent('navigation','funds:ribbon')}">Funds</a>
+<div class="megaMenu"></div>
+</li>
+<li class="topNav__item -has-megaMenu" id="nav16516">
+<a class="topNav__link 0" href="https://www.hl.co.uk/shares" onclick="if(typeof(scto)!='undefined'){scto.adv_trackevent('navigation','shares:ribbon')}">Shares</a>
+<div class="megaMenu"></div>
+</li>
+<li class="topNav__item -has-megaMenu" id="nav16522">
+<a class="topNav__link 0" href="https://www.hl.co.uk/news" onclick="if(typeof(scto)!='undefined'){scto.adv_trackevent('navigation','Newsroom:ribbon')}">News</a>
+<div class="megaMenu megaMenu__news -has-content">
+<div class="megaMenu__loading" id="megaNews__loading"></div>
+<div class="hide" id="megaNews">
+<div class="row row-flex">
+<div class="columns medium-5">
+<div class="megaMenuSidebar">
+<p class="megaList__heading">
+<a class="megaList__headerLink" href="/news">HL Insight</a>
+</p>
+<div id="megaNews__insight"></div>
+</div>
+</div>
+<div class="columns medium-7">
+<p class="megaList__heading -is-first">
+<a class="megaList__headerLink" href="/news/tags/newsroom">Newsroom</a>
+</p>
+<div class="row">
+<div class="columns medium-7 large-8">
+<div class="megaNews__newsroom" id="megaNews__newsroom"></div>
+</div>
+<div class="columns medium-5 large-4">
+<p>
+                          Newsroom articles are published by leading news
+                          agencies.
+                        </p>
+<p>
+                          Hargreaves Lansdown is not responsible for an
+                          article's content and its accuracy. We may not share
+                          the views of the author.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="topNav__item -has-megaMenu" id="nav16526">
+<a class="topNav__link 0" href="https://www.hl.co.uk/pensions" onclick="if(typeof(scto)!='undefined'){scto.adv_trackevent('navigation','pensions:ribbon')}">Pensions</a>
+<div class="megaMenu"></div>
+</li>
+<li class="topNav__item -has-megaMenu" id="nav15545868">
+<a class="topNav__link 0" href="https://www.hl.co.uk/learn" onclick="if(typeof(scto)!='undefined')  {scto.adv_trackevent('navigation','learn:help')}">Learn</a>
+<div class="megaMenu"></div>
+</li>
+<li class="topNav__login -has-megaMenu" id="nav16535">
+<a class="topNav__link topNav__loginLink" href="https://online.hl.co.uk/my-accounts" id="navMyAccountsLink" onclick="if(typeof(scto)!='undefined'){scto.adv_trackevent('navigation','log in:ribbon')}">My account</a>
+<div class="megaMenu megaMenu__maad"></div>
+</li>
+<li class="topNav__search" id="navSearch">
+<a class="topNav__link topNav__searchLink" id="navSearchLink" role="button">Search</a>
+<div class="topNavSearch -inTopNav" id="navSearchForm">
+<form action="https://www.hl.co.uk/functions/search" id="megaNavPaneMainForm" method="get">
+<label class="screenReaderOnly" for="megaNavSearchMainInput">Search website</label>
+<input autocomplete="off" class="topNavSearch__input -inTopNav" id="megaNavSearchMainInput" placeholder="Search website" type="search"/>
+<input alt="Search" class="topNavSearch__button" src="https://www.hl.co.uk/__data/assets/file/0017/12414032/search-icon.svg" type="image"/>
+</form>
+</div>
+<div class="megaMenu -has-content megaMenu__search" id="megaNavSearchMain">
+<div class="row">
+<div class="columns">
+<div id="megaNavSearchMainSuggestions"></div>
+</div>
+</div>
+</div>
+</li>
+<li class="topNav__mobileMenu" id="topNavMobileMenu">
+<a class="topNav__link topNav__mobileMenuLink" id="topNavMobileMenuLink">Menu</a>
+</li>
+<li class="topNav__mobileLogin" id="topNavMobileMyAccounts">
+<a class="topNav__link topNav__mobileLoginLink" id="topNavMobileMyAccountsLink">My account</a>
+</li>
+<li class="topNav__mobileSearch" id="topNavMobileSearch">
+<a class="topNav__link topNav__mobileSearchLink" id="topNavMobileSearchLink" role="button">Search</a>
+</li>
+</ul>
+</nav>
+<nav class="mobileNav -is-level-0" id="mobileNav">
+<div class="mobileNav_wrapper">
+<div class="mobileNavPane mobileNavPane0" id="mobileNavPane0">
+<div class="topNavSearch">
+<form action="https://www.hl.co.uk/functions/search" method="get">
+<label class="screenReaderOnly" for="mobileNavSearchInput">Search website</label>
+<input autocapitalize="off" autocomplete="off" autocorrect="off" class="topNavSearch__input" id="mobileNavSearchInput" name="q" placeholder="Search" spellcheck="false" type="search"/>
+<input alt="search" class="topNavSearch__button" src="https://www.hl.co.uk/__data/assets/file/0017/12414032/search-icon.svg" type="image"/>
+</form>
+</div>
+<ul class="mobileNavList">
+<li class="mobileNavList__item">
+<a class="mobileNavList__link -noBorder" data-navsub="16508" href="https://www.hl.co.uk/investment-services" onclick="if(typeof(scto)!='undefined'){scto.adv_trackevent('navigation','our services:ribbon')}">Our services</a>
+</li>
+<li class="mobileNavList__item">
+<a class="mobileNavList__link" data-navsub="16512" href="https://www.hl.co.uk/funds" onclick="if(typeof(scto)!='undefined'){scto.adv_trackevent('navigation','funds:ribbon')}">Funds</a>
+</li>
+<li class="mobileNavList__item">
+<a class="mobileNavList__link" data-navsub="16516" href="https://www.hl.co.uk/shares" onclick="if(typeof(scto)!='undefined'){scto.adv_trackevent('navigation','shares:ribbon')}">Shares</a>
+</li>
+<li class="mobileNavList__item">
+<a class="mobileNavList__link" href="https://www.hl.co.uk/news" onclick="if(typeof(scto)!='undefined'){scto.adv_trackevent('navigation','Newsroom:ribbon')}">News</a>
+</li>
+<li class="mobileNavList__item">
+<a class="mobileNavList__link" data-navsub="16526" href="https://www.hl.co.uk/pensions" onclick="if(typeof(scto)!='undefined'){scto.adv_trackevent('navigation','pensions:ribbon')}">Pensions</a>
+</li>
+<li class="mobileNavList__item">
+<a class="mobileNavList__link" data-navsub="15545868" href="https://www.hl.co.uk/learn" onclick="if(typeof(scto)!='undefined'){scto.adv_trackevent('navigation','learn:help')}">Learn</a>
+</li>
+<li class="mobileNavList__item">
+<a class="mobileNavList__link" data-navsub="16535" href="https://online.hl.co.uk/my-accounts" id="mobileNavListLinkMyAccount" onclick="if(typeof(scto)!='undefined'){scto.adv_trackevent('navigation','log in:ribbon')}">My account</a>
+</li>
+</ul>
+<div class="mobileNavFooterList">
+<ul class="mobileNavFooterList__list">
+<li class="mobileNavFooterList__item">
+<a class="mobileNavFooterList__link" href="https://online.hl.co.uk/my-accounts/registration">Register</a>
+</li>
+<li class="mobileNavFooterList__item">
+<a class="mobileNavFooterList__link" href="https://www.hl.co.uk/watchlists">Watchlists</a>
+</li>
+<li class="mobileNavFooterList__item">
+<a class="mobileNavFooterList__link" href="https://www.hl.co.uk/help">Help</a>
+</li>
+<li class="mobileNavFooterList__item">
+<a class="mobileNavFooterList__link" href="https://www.hl.co.uk/contact-us">Contact us</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="mobileNavPane mobileNavPane1 -loading" id="mobileNavPane1"></div>
+<div class="mobileNavPane mobileNavPane2 -loading" id="mobileNavPane2"></div>
+</div>
+</nav>
+<div class="mobileNav" id="mobileNavMyAccounts">
+<div class="mobileNavPaneMyAccounts -loading" id="mobileNavPaneMyAccount"></div>
+</div>
+<div class="mobileNav" id="mobileNavSearch">
+<div class="mobileNavPaneSearch">
+<div class="topNavSearch">
+<form action="https://www.hl.co.uk/functions/search" id="mobileNavPaneMainForm" method="get">
+<label class="screenReaderOnly" for="mobileNavSearchMainInput">Search website</label>
+<input autocapitalize="off" autocomplete="off" autocorrect="off" class="topNavSearch__input" id="mobileNavSearchMainInput" placeholder="Search" spellcheck="false" type="search"/>
+<input alt="search" class="topNavSearch__button" src="https://www.hl.co.uk/__data/assets/file/0017/12414032/search-icon.svg" type="image"/>
+</form>
+</div>
+<div id="mobileNavSearchMainSuggestions"></div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  if (logged_in) {
+    document.getElementById("navMyAccountsLink").innerHTML = "My account";
+    document.getElementById("topNavMobileMyAccountsLink").innerHTML =
+      "My account";
+    document
+      .getElementById("topNavMobileMyAccountsLink")
+      .removeAttribute("href");
+    document.getElementById("mobileNavListLinkMyAccount").innerHTML =
+      "My account";
+    document
+      .getElementById("mobileNavListLinkMyAccount")
+      .setAttribute("data-navSub", "16535");
+    document.getElementById("watchlistWidget__linkCopy").className +=
+      " -is-loggedin";
+    document.getElementById("headerTopList__logout").className +=
+      " -is-loggedin";
+    document.getElementById("headerTopList_register").style.display = "none";
+  }
+
+</script>
+<!-- NAVIGATION -->
+<!-- END HEADER NAVIGATION -->
+<!-- BREADCRUMBS -->
+<div class="breadcrumb">
+<div class="container">
+<ul class="breadcrumb__list">
+<li class="breadcrumb__item">
+<a class="breadcrumb__link" href="https://www.hl.co.uk">Home</a>
+</li>
+<li class="breadcrumb__item">
+            Watchlists          </li>
+</ul>
+</div>
+</div>
+<main id="mainContent">
+<div class="container">
+<div class="row"> <!-- END OUR SERVICES -->
+<!-- FEATURE ARTICLES -->
+<!-- Hides article from left nav -->
+<div class="columns small-12">
+<h1 class="main" id="watchlists_h1">Watchlists</h1><div id="watchlists_tutorial"><a class="link-headline" href="#" title="View the Watchlist tutorial">Need help? View our tutorial</a></div>
+</div><div class="columns"><noscript>
+<div id="watchlists_js_error">
+		Your device currently has JavaScript disabled. JavaScript is required to use Watchlists. To find out more about JavaScript and how to enable it please refer to your browser's help section. If you continue to have difficulties accessing your account or any other section of the site, or simply require further information, please contact our Online Support team on <strong>0117 980 9953</strong>.
+	</div>
+</noscript>
+<div id="watchlists">
+    <div class="data" style="">
+        <div><p class="spacer-top-none">
+Welcome to the new watchlists tool. You can use watchlists to track the performance of funds, shares and other investm
+ents.
+
+ You can create multiple watchlists, add or remove investments as you choose and even copy details of holdings fr
+ om your account.</p><p>If you use our mobile app, your watchlists will automatically sync across devices.</p>
+ <p>Getting started is easy, simply enter a name or, for shares, an EPIC in the 'Add a fund or share' box below.
+ For more options, click the 'Advanced search' link. You can also add investments directly from any fund or s
+ hare factsheet by clicking the <img alt="Add to watchlist" src="//www.hl.co.uk/__data/assets/image/0008/84
+ 66758/watchlist-icon.png"/> icon. <a href="#" title="Hide this message">Hide this me
+ ssage</a></p><
+
+ /div>
+ <div id="watchlists_tabs_cont" style="display: block;">
+ <ul class="tabs-divide-two-line clearfix" id="watchlists_tabs" style="position: relative;">
+ <li class="one-line watchlist_tab_id_000000005f882c5802c1c3ac10258e999d current">
+ <a href="#">Marlborough</a></li><li class="one-line watchlist_tab_id_000000005f882f9b0507fcac10258cb131">
+ <a href="#">GS Europe</a></li><li class="one-line watchlist_tab_id_000000005f88303c0a5fdaac1015667aa5">
+ <a href="#">Jupyiter European Opportunities</a></li>
+ <li class="one-line watchlist_tab_id_000000005f8830a0028453ac10258e100b"><a href="#">MFS Meridian</a>
+ </li><li class="watchlist_tab_id_000000005f897e090408f6ac10258c5e90">
+ <a href="#">ASI GLOBAL <br/>SMALLER COMPANIES</a></li><li class="one-line watchlist_tab_id_000000005f897ec10b9c4
+ bac101560200d" style="display: none;"><a href="#">FIDELITY INDEX WORLD</a></li><li class="one-line watchlist_t
+ ab_id_000000005f89809106fa4bac10154e68ab" style="display: none;"><a href="#">SCHRODER MANAGED BALANCED</a></li><
+ li class="one-line create-new" style="display: none;"><a href="#">Create new +</a></li><li class="one-line lef
+ t additional" style="display: list-item;"><a href="#" title="Show more">...</a></li></ul>
+ </div>
+
+ <div class="clearfix" id="watchlists_toolbox" style="display: block;">
+ <form action="https://www.hl.co.uk/watchlists/search" class="left" id="watchlist_toolbox_search">
+ <label class="spacer-right-half" for="watchlist_toolbox_search_input">Add a fund or share:<
+ /label><span id="watchlist_toolbox_search_container"><input autocomplete="off" class="default" id="watchlist
+ _toolbox_search_input" name="stock_search_input" type="text" value="Enter a name or epic"/><input alt="Search"
+  id="watchlist_toolbox_search_button" src="/__data/assets/image/0004/6542518/mag-glass.png" type="image"/></span>
+  <a class="link-headline" href="https://www.hl.co.uk/watchlists/search" id="watchlist_advanced_search" title="Advanc
+  ed search">Advanced search</a><div class="stock-search-box" id="stock_list0"></div></form><div class="right"><a clas
+  s="link-headline copy_account" href="#" title="Copy account to watchlist">Copy account to watchlist</a> | <a class="
+  link-headline edit_watchlist" href="#" title="Edit this watchlist">Edit watchlist</a> | <a class="link-headline watchl
+  ist_settings" href="#" title="Edit your watchlist settings">Watchlist settings</a></div></div><div id="watchlists_mess
+  agebox" style="display: none;"></div><div class="watchlist_table_wrapper"><table id="watchlists_table" style="display:
+   table;"><thead><tr><th class="stock-name col-order" id="colorder-name" rowspan="2"><a href="#" title="Order holding
+   s by name">Stock name</a></th><th rowspan="2">Price</th><th class="day-change" colspan="2" rowspan="2">Day change<
+   /th><th rowspan="2">Units</th><th id="colorder-unitcost" rowspan="2"><a href="#" title="Order holdings by unit cos
+   t">Unit cost (p)</a></th><th id="colorder-totalcost" rowspan="2" style="display: none;"><a href="#" title="Order ho
+   ldings by total cost">Total cost (£)</a></th><th id="colorder-value" rowspan="2"><a href="#" title="Order holdings
+    by value">Value (£)</a></th><th colspan="2" style="border-bottom-width: 1px;">Gain/loss</th><th class="actions" rowspan="2">Actions</th></tr><tr><th id="colorder-gain" style="border-left-width:1px !important"><a href="#" title="Order holdings by gain (£)">£</a></th><th id="colorder-gainpct"><a href="#" title="Order holdings by gain (%)">%</a></th></tr></thead><tbody><tr class="holding-row-B830MV7"><td class="align-left"><a class="link-headline" href="https://www.hl.co.uk/funds/fund-discounts,-prices--and--factsheets/search-results/B830MV7" title="View factsheet for Marlborough Technology Class P - Accumulation (GBP)"><strong class="text-increase-0">Marlborough Technology</strong></a> <sup> <a class="link-headline" href="#n1">1</a> <a class="link-headline" href="#n5">5</a> </sup><br/><span class="text-reduce-2">
+    Class P - Accumulation (GBP)</span><span class="watchlist_icon info spacer-left-half"></span></td><td>777.63p</td>
+    <td class="negative change_cont">-7.03p</td><td class="negative perc_cont">-0.9%</td><td style="display: table-ce
+    ll;">1</td><td style="display: table-cell;">787.41</td><td style="display: none;">7.87</td><td><span id="live_pri
+    ce_value_B830MV7-L">7.78</span></td><td class="negative"><span class="negative" id="live_price_gaingbp_B830MV7-L
+    ">-0.1</span></td><td class="negative"><span class="negative" id="live_price_gainpc_B830MV7-L">-1.24</span></td>
+    <td class="align-center actions"><a class="btn-icons btn-factsheet spacer-right-half" href="https://www.hl.co.uk
+    /funds/fund-discounts,-prices--and--factsheets/search-results/B830MV7">View factsheet</a><a class="btn-icons bt
+    n-alert spacer-right-half btn-inactive" href="#">Create an alert</a><a class="watchlists_btn_icon_edit spacer-r
+    ight-half" href="#">Edit this stock</a><a class="btn-icons btn-deal" href="https://online.hl.co.uk/my-accounts/s
+    ecurity_deal/sedol/B830MV7">Deal</a></td></tr><tr class="total_row"><td class="align-left" colspan="6">Total<span s
+    tyle="display: none;"><span id="costgbp_total">7.87</span></span></td><td id="stock_total">7.78</td><td class="negative" id="gaingbp_total">-0.1</td><td class="negative" id="gainpc_total">-1.24%</td><td class="actions"></td></tr></tbody></table></div><div class="clearfix" id="watchlists_footer" style="display: block;"><p id="watchlists_pricesmsg"><span class="market-status box-hide"><span class="market-closed"><strong class="text-emphasis-color">Market closed</strong></span> | </span><span class="stream_msg_closed"></span><span class="stream_msg">Prices delayed by at least 15 minutes</span> | <a class="livePrices_preferences preferences link-headline" href="https://online.hl.co.uk/my-accounts/manage-preferences" name="preferences"> Switch to live prices </a><span class="box-hide preferences_no_link"></span><span class="lo_preferences_container box-hide" style="display: inline;"> | <a class="preference lo_preferences link-headline" href="#" name="lo_prefrences">Turn <strong>on</strong> streaming prices</a></span></p><div id="watchlists_footer_download"><a class="print" href="#" title="Print this page">Print page</a><a class="pdf" href="https://www.hl.co.uk/__cors/ajaxx/rest.php/watchlist.get/watchlistId/000000005f882c5802c1c3ac10258e999d/download/pdf/addDayChange/true" target="_blank" title="Download this watchlist as a PDF">PDF version</a><a class="download" href="https://www.hl.co.uk/__cors/ajaxx/rest.php/watchlist.get/watchlistId/000000005f882c5802c1c3ac10258e999d/download/xls/addDayChange/true" target="_blank">Download</a><a class="undock" href="#" title="Open in new window">Open in new window</a></div></div><div class="row" id="watchlists_footer_news" style="display: none;"><div class="columns medium-6 large-6 small-hide watchlists_footer_news_list watchlists_footer_news_list_articles spacer-top large-spacer-top-none medium-spacer-top-none"><h2>Company news</h2><ul><li class="align-center"><img alt="Loading" src="//www.hl.co.uk/__data/assets/image/0012/6485709/ajax-loading.gif"/></li></ul></div><div class="columns medium-6 large-6 small-hide watchlists_footer_news_list watchlists_footer_news_list_rns spacer-top-dbl medium-spacer-none large-spacer-none"><h2>Company announcements</h2><ul><li class="align-center"><img alt="Loading" src="//www.hl.co.uk/__data/assets/image/0012/6485709/ajax-loading.gif"/></li></ul></div></div><div id="watchlists_footer_notes" style="display: block;"><a class="float-right link-headline" href="#">Hide footnotes</a><h2>Notes</h2><ul style="display: block;"><li id="n1"><sup>1</sup> The price shown is at the close of the last business day.</li><li id="n5"><sup>5</sup> We're unable to show live prices for this stock.</li></ul></div></div>
+
+<div class="loading" style="display: none;"><img alt="Loading..." src="https://www.hl.co.uk/__data/assets/image/0012/6485709/ajax-loading.gif"/></div>
+</div>
+<script src="/__zzz/1440/10859449_14330081.js"></script>
+<script>
+$(function(){
+$(document).on('click',function(){
+$('#stock_list0').hide();
+});
+});
+</script>
+<span class="box-hide" data-field="DELAY" data-grid="stocks" data-item="STREAM_CAVEAT" data-source="lightstreamer" id="prices_delay"></span>
+<span class="box-hide" data-field="STREAM_STATUS" data-grid="stocks" data-item="STREAM_CAVEAT" data-source="lightstreamer" id="market"></span>
+<span class="box-hide" data-field="STREAM_STATUS" data-grid="stocks" data-item="STREAM_CAVEAT" data-source="lightstreamer" id="prices_status"></span>
+<span class="box-hide" data-field="PRICES_AS_AT" data-grid="stocks" data-item="STREAM_CAVEAT" data-source="lightstreamer" id="prices_last_tick"></span></div>
+<br class="box-enclose"/>
+</div>
+</div>
+</main>
+<!-- START TRADING FOOTER -->
+<!-- ONLOAD -->
+<div class="navigationBg" id="navigationBg"></div>
+<footer>
+<div class="footerTop">
+<div class="container">
+      Our website offers information about investing and saving, but not personal advice. If you're not sure which
+      investments are right for you, please request advice, for example from our <a href="https://www.hl.co.uk/financial-advice">financial
+        advisers</a>. If you decide to invest, read our <a href="https://www.hl.co.uk/important-investment-notes">important investment notes</a> first and
+      remember that investments can go up and down in value, so you could get back less than you put in.
+    </div>
+</div>
+<div class="footerMain">
+<div class="container">
+<div class="row">
+<div class="large-3 medium-3 columns">
+<div class="footerList">
+<p class="footerList__heading">Important information</p>
+<ul class="footerList__items">
+<li class="footerList__item">
+<a class="footerList__link" href="https://www.hl.co.uk/disclaimer">Statutory disclosures</a>
+</li>
+<li class="footerList__item">
+<a class="footerList__link" href="https://www.hl.co.uk/important-investment-notes">Important investment notes</a>
+</li>
+<li class="footerList__item">
+<a class="footerList__link" href="https://www.hl.co.uk/terms-and-conditions">Terms &amp; Conditions</a>
+</li>
+<li class="footerList__item">
+<a class="footerList__link" href="https://www.hl.co.uk/cookie-policy">Cookie policy</a>
+</li>
+<li class="footerList__item">
+<a class="footerList__link" href="https://www.hl.co.uk/privacy-policy">Privacy notice</a>
+</li>
+<li class="footerList__item">
+<a class="footerList__link" href="https://www.hl.co.uk/accessibility" id="accessibility" name="accessibility">Accessibility</a>
+</li>
+<li class="footerList__item">
+<a class="footerList__link" href="https://www.hl.co.uk/__data/assets/pdf_file/0009/11399832/Modern-Slavery-Act.pdf">Modern Slavery Act Statement</a>
+</li>
+<li class="footerList__item">
+<a class="footerList__link" href="https://www.hl.co.uk/contact-us">Contact us</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="large-3 medium-3 columns">
+<div class="footerList">
+<p class="footerList__heading">Useful information</p>
+<ul class="footerList__items">
+<li class="footerList__item">
+<a class="footerList__link" href="https://www.hl.co.uk/about-us">About us</a>
+</li>
+<li class="footerList__item">
+<a class="footerList__link" href="https://www.hl.co.uk/investor-relations">Investor relations</a>
+</li>
+<li class="footerList__item">
+<a class="footerList__link" href="https://www.hl.co.uk/corporate-social-responsibility">Corporate Social Responsibility</a>
+</li>
+<li class="footerList__item">
+<a class="footerList__link" href="https://www.hl.co.uk/about-us/press">Press</a>
+</li>
+<li class="footerList__item">
+<a class="footerList__link" href="http://www.hargreaveslansdownjobs.co.uk" target="_blank">Careers</a>
+</li>
+<li class="footerList__item">
+<a class="footerList__link" href="https://www.hl.co.uk/about-us/affiliate-program">Affiliate program</a>
+</li>
+<li class="footerList__item">
+<a class="footerList__link" href="https://www.hl.co.uk/about-us/developer-tools">Developer tools</a>
+</li>
+<li class="footerList__item">
+<a class="footerList__link" href="https://www.hl.co.uk/sitemap">Sitemap</a>
+</li>
+<li class="footerList__item">
+<a class="footerList__link" data-modal="type: ajax, href: https://www.hl.co.uk/about-us/social-media/share-this-page?url=https://www.hl.co.uk/watchlists" href="#" id="share-page-link">Share this page</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="large-6 medium-6 columns">
+<div class="row">
+<div class="large-6 medium-6 columns">
+<div class="footerList">
+<p class="footerList__heading">Popular services</p>
+<ul class="footerList__items">
+<li class="footerList__item">
+<a class="footerList__link" href="https://www.hl.co.uk/investment-services/isa">Stocks and Shares ISA</a>
+</li>
+<li class="footerList__item">
+<a class="footerList__link" href="https://www.hl.co.uk/pensions/sipp">SIPP</a>
+</li>
+<li class="footerList__item">
+<a class="footerList__link" href="https://www.hl.co.uk/funds/investing-in-funds">Fund dealing</a>
+</li>
+<li class="footerList__item">
+<a class="footerList__link" href="https://www.hl.co.uk/shares/share-dealing">Share dealing</a>
+</li>
+<li class="footerList__item">
+<a class="footerList__link" href="https://www.hl.co.uk/retirement/drawdown">Drawdown</a>
+</li>
+<li class="footerList__item">
+<a class="footerList__link" href="https://www.hl.co.uk/investment-services/active-savings">Cash savings</a>
+</li>
+<li class="footerList__item">
+<a class="footerList__link" href="https://www.hl.co.uk/investment-services/lifetime-isa">Lifetime ISA</a>
+</li>
+<li class="footerList__item">
+<a class="footerList__link" href="https://www.hl.co.uk/investment-services/junior-isa">Junior ISA</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="large-6 medium-6 columns">
+<div class="footerList">
+<p class="footerList__heading">Online access</p>
+<ul class="footerList__items">
+<li class="footerList__item">
+<a class="footerList__link" href="https://www.hl.co.uk/security-centre">Security Centre</a>
+</li>
+<li class="footerList__item">
+<a class="footerList__link" href="https://online.hl.co.uk/my-accounts/registration">Register for online
+                      access</a>
+</li>
+</ul>
+</div>
+<div class="footerList">
+<p class="footerList__heading">Other websites</p>
+<ul class="footerList__items">
+<li class="footerList__item reducedLineHeight">
+<a class="footerList__link" href="https://www.hl.co.uk/workplace">HL Workplace
+                      <br/>
+<span class="fontBody3">(Company pensions)</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="footerList">
+<ul class="footerList__items">
+<li class="footerList__item">
+<a class="footerList__link hide" data-responsiveswitch="true" href="#" id="footerResponsiveSwitch">Switch to desktop version</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footerBottom">
+<div class="container">
+<div class="row">
+<div class="columns">
+<a class="footerBottomLogo" href="/">
+<svg aria-labelledby="logoTitleFooter" class="footerBottomLogo__icon" focusable="false" viewbox="0 0 190 117.8" xmlns="http://www.w3.org/2000/svg">
+<title id="logoTitleFooter">Hargreaves Lansdown</title>
+<path d="M116.8 0v117.8h67.8l5.4-16.4h-51.2V0zM73.1 0v50.1H28.3V0H.4l6 20.3v97.5h21.9V68.1h44.8v49.7h22V0z" fill="#FFF"></path>
+</svg>
+</a>
+<div class="footerBottomSocial">
+<a class="footerBottomSocial__link" href="https://www.facebook.com/pages/Hargreaves-Lansdown/139193179458411" onclick="if(typeof(scto) != 'undefined'){scto.adv_trackevent('content','internal','footer_facebook')};" rel="me" target="_blank">
+<svg aria-labelledby="footerFacebookIcon" class="footerBottomSocial__icon" fill="#fff" focusable="false" viewbox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+<title id="footerFacebookIcon">Follow us on Facebook</title>
+<path d="M12.5 1C6.2 1 1 6.2 1 12.5S6.2 24 12.5 24 24 18.8 24 12.5 18.8 1 12.5 1zm3 7.4h-1c-1 0-1.4.5-1.4 1.4v1h2.4l-.5 2.4h-1.9V19h-2.4v-5.8H8.8v-2.4h1.9V9.4c0-2 1.1-3.4 2.9-3.4h1.9v2.4z"></path>
+</svg>
+</a>
+<a class="footerBottomSocial__link" href="https://twitter.com/HLInvest" onclick="if(typeof(scto) != 'undefined'){scto.adv_trackevent('content','internal','footer_twitter')};" rel="me" target="_blank">
+<svg aria-labelledby="footerTwitterIcon" class="footerBottomSocial__icon" fill="#fff" focusable="false" viewbox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+<title id="footerTwitterIcon">Twitter</title>
+<path d="M12.5 1C6.2 1 1 6.2 1 12.5S6.2 24 12.5 24 24 18.8 24 12.5 18.8 1 12.5 1zm6.4 8.5c-.3.4-.6.8-1 1.1-.1.1-.2.2-.2.3 0 .8-.2 1.7-.5 2.5s-.8 1.6-1.3 2.3c-.6.7-1.4 1.3-2.2 1.7-.9.4-1.9.6-3 .6-1.2 0-2.5-.3-3.5-.9-.1 0-.1-.1-.1-.2s.1-.1.2-.1h.3c.9 0 1.9-.3 2.6-.8-.9-.2-1.7-.8-2-1.7 0-.1.1-.2.2-.2h.4c-.9-.4-1.5-1.3-1.5-2.4 0-.1.1-.2.2-.1.2.1.4.2.6.2-.5-.5-.8-1.1-.8-1.8 0-.4.1-.9.4-1.3 0-.1.2-.1.2 0 1.2 1.4 2.8 2.3 4.6 2.5h.1v-.1c0-.3 0-.6.1-.9.2-.8.8-1.5 1.7-1.8.3-.1.5-.1.8-.1.6 0 1.2.2 1.7.6.1 0 .1.1.2.1h.1c.4-.1.9-.3 1.2-.5.1-.1.2 0 .2.2-.1.4-.4.8-.7 1.1.3-.1.6-.2.8-.3.2-.3.3-.1.2 0z"></path>
+</svg>
+</a>
+<a class="footerBottomSocial__link" href="https://www.linkedin.com/company/hargreaves-lansdown" onclick="if(typeof(scto) != 'undefined'){scto.adv_trackevent('content','internal','footer_linkedin')};" rel="me" target="_blank">
+<svg aria-labelledby="footerLinkedinIcon" class="footerBottomSocial__icon" fill="#fff" focusable="false" viewbox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+<title id="footerLinkedinIcon">Linkedin</title>
+<path d="M12.5 1C6.2 1 1 6.2 1 12.5S6.2 24 12.5 24 24 18.8 24 12.5 18.8 1 12.5 1zM9.2 18H6.7v-8h2.5v8zM8 9c-.8 0-1.5-.7-1.5-1.5S7.2 6 8 6s1.5.7 1.5 1.5C9.4 8.3 8.8 9 8 9zm10.5 9H16v-4.2c0-1.2-.4-1.8-1.3-1.8-1 0-1.5.7-1.5 1.8V18h-2.4v-8h2.4v1.1s.7-1.3 2.4-1.3 2.9 1 2.9 3.2v5z"></path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer><script src="/__zzz/10080/16178740_14775644_14775631_14775646_14775636_14775647_10859503.js"></script><div class="modal" id="modal-1" style="display: none;">
+<div class="modal__panel">
+<button class="modal__close">
+<span class="screenReaderOnly">Close</span>
+<svg id="closeIcon" viewbox="0 0 49.9 43" xmlns="http://www.w3.org/2000/svg">
+<path class="st0" d="M6.5 18.9h37.9v4H6.5z" transform="rotate(-45 25.5 20.9)"></path>
+<path class="st0" d="M23.4 1.9h4v37.9h-4z" transform="rotate(-45 25.4 20.9)"></path>
+</svg>
+</button>
+<div class="modal__body" tabindex="0">
+<div class="modal__content-wrapper">
+<div class="modal__content-loading">
+<p>Loading...</p>
+</div>
+<p class="modal__title h2"></p>
+<div class="modal__content"></div>
+</div>
+</div>
+</div>
+</div>
+<noscript class="deferred-styles">
+<link href="/__zzz/10080/12414230.css" media="all" rel="stylesheet" type="text/css"/></noscript>
+<script>
+    var loadDeferredStyles = function() {
+        if(document.querySelectorAll('.deferred-styles').length > 0){
+            for(var i=0;i<document.querySelectorAll('.deferred-styles').length;i++){
+                var addStylesNode = document.querySelectorAll('.deferred-styles')[i];
+                var replacement = document.createElement("div");
+                replacement.innerHTML = addStylesNode.textContent;
+                document.body.appendChild(replacement)
+            }
+        }
+    };
+    var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
+    if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+    else window.addEventListener('load', loadDeferredStyles);
+</script><script type="text/javascript">
+  //<![CDATA[
+  document.domain = 'hl.co.uk';
+  //]]>
+</script>
+<script src="//online.hl.co.uk/global/scr/lightstreamer.js" type="text/javascript"></script>
+<script src="//online.hl.co.uk/group/scr/stream_prices.js?v=1" type="text/javascript"></script><script type="text/javascript">$(function(){prices.auto_price_preferences = false;prices.currencyConversionEnabled = true;prices.append = 'p';prices.prefix_positive = true;prices.color_totals = true;});</script>
+<script src="/__zzz/60/10864739_15838670.js" type="text/javascript"></script>
+<script type="text/javascript">
+ if(typeof _satellite != 'undefined'){_satellite.pageBottom();}
+</script>
+<div>
+<link href="/__zzz/10080/12414230.css" media="all" rel="stylesheet" type="text/css"/></div><script>_satellite["__runScript2"](function(event, target) {
+function globalTargetPageParams(){var e=window.trackingobj||{},s=["mbox_profile_push"];if(e.client_2){var a=[],p=e.client_2.split("|"),r=p[0].split(","),l=p[1].split(","),o=p[2].split(","),t=new Date;switch(s.push("profile.has_22="+("s9j6"==r[0]?1:0)),"s9j6"==r[0]?(s.push("profile.hasp_22=1"),3==t.getMonth()&&5<t.getDate()||3<t.getMonth()?s.push("profile.has_22_"+t.getFullYear()+"=1"):s.push("profile.has_22_"+(t.getFullYear()-1)+"=1"),a.push("22")):"/my-accounts/account_summary/account/22"==document.location.pathname&&(s.push("profile.hasp_22=1"),a.push("22")),"/my-accounts/savings/account/54/overview"==document.location.pathname&&(s.push("profile.has_54=1"),a.push("54")),"/my-accounts/savings/account/53/overview"==document.location.pathname&&(s.push("profile.has_53=1"),a.push("53")),s.push("profile.has_24="+("49cf"==r[1]?1:0)),s.push("profile.has_62="+("tuc8"==r[2]?1:0)),s.push("profile.has_21="+("98v8"==r[3]?1:0)),"49cf"==r[5]&&a.push("24"),"tuc8"==r[6]&&a.push("62"),"98v8"==r[7]&&a.push("21"),s.push("profile.has_26="+("73gf"==r[4]?1:0)),"73gf"==r[0]&&(s.push("profile.hasp_26=1"),3==t.getMonth()&&5<t.getDate()||3<t.getMonth()?s.push("profile.has_26_"+t.getFullYear()+"=1"):s.push("profile.has_26_"+(t.getFullYear()-1)+"=1"),a.push("26")),s.push("profile.has_98="+("f5fx"==r[5]?1:0)),s.push("profile.has_70="+("wsr5"==r[6]?1:0)),s.push("profile.has_80="+("4ada"==r[7]?1:0)),s.push("profile.has_74="+("0klm"==r[8]?1:0)),s.push("profile.has_71="+("e6in"==r[9]?1:0)),s.push("profile.has_68="+("c87c"==r[10]?1:0)),"f5fx"==r[5]&&a.push("98"),"wsr5"==r[6]&&a.push("70"),"4ada"==r[7]&&a.push("80"),"0klm"==r[8]&&a.push("74"),"e6in"==r[9]&&a.push("71"),"c87c"==r[10]&&a.push("68"),l[0]){case"n88a":s.push("profile.all_21=1");break;case"4s0s":s.push("profile.all_21=2");break;case"5bya":s.push("profile.all_21=3");break;case"5myy":s.push("profile.all_21=4");break;case"6dkh":s.push("profile.all_21=5");break;case"1yi1":s.push("profile.all_21=6");break;case"xk1j":s.push("profile.all_21=7");break;case"yai7":s.push("profile.all_21=8");break;case"b9im":s.push("profile.all_21=9");break;case"4eg2":s.push("profile.all_21=10");break;case"yq9j":s.push("profile.all_21=11");break;case"6hwk":s.push("profile.all_21=12");break;case"6iya":s.push("profile.all_21=13");break;case"87fe":s.push("profile.all_21=14")}switch(l[1]){case"2vuc":s.push("profile.all_22=1");break;case"8gil":s.push("profile.all_22=2");break;case"8jxu":s.push("profile.all_22=3");break;case"9epx":s.push("profile.all_22=4");break;case"ap6j":s.push("profile.all_22=5");break;case"eq2w":s.push("profile.all_22=6");break;case"4wst":s.push("profile.all_22=7");break;case"wzc8":s.push("profile.all_22=8");break;case"xuf0":s.push("profile.all_22=9");break;case"zd00":s.push("profile.all_22=10");break;case"o2w0":s.push("profile.all_22=11");break;case"bgv5":s.push("profile.all_22=12");break;case"c7dl":s.push("profile.all_22=13");break;case"c8or":s.push("profile.all_22=14")}switch(l[2]){case"mx3w":s.push("profile.all_26=1");break;case"f3xd":s.push("profile.all_26=2");break;case"fl58":s.push("profile.all_26=3");break;case"g1iz":s.push("profile.all_26=4");break;case"g5qg":s.push("profile.all_26=5");break;case"1cfe":s.push("profile.all_26=6");break;case"1clr":s.push("profile.all_26=7");break;case"27mf":s.push("profile.all_26=8");break;case"2bmw":s.push("profile.all_26=9");break;case"2d2u":s.push("profile.all_26=10");break;case"4a2l":s.push("profile.all_26=11");break;case"l7nz":s.push("profile.all_26=12");break;case"lm77":s.push("profile.all_26=13");break;case"lxs7":s.push("profile.all_26=14")}switch(l[3]){case"om48":s.push("profile.ftb=1");break;case"daa9":s.push("profile.ftb=2");break;case"ccv3":s.push("profile.ftb=3");break;case"yte0":s.push("profile.ftb=4");break;case"9pqf":s.push("profile.ftb=5");break;case"mx6t":s.push("profile.ftb=6")}switch(l[4]){case"9vy3":s.push("profile.stb=1");break;case"wt2m":s.push("profile.stb=2");break;case"doc4":s.push("profile.stb=3");break;case"7jkw":s.push("profile.stb=4");break;case"3u4d":s.push("profile.stb=5");break;case"2wvq":s.push("profile.stb=6")}switch(l[5]){case"bg8c":s.push("profile.tw=1");break;case"gz8k":s.push("profile.tw=2");break;case"x3ew":s.push("profile.tw=3");break;case"ikp2":s.push("profile.tw=4");break;case"97vm":s.push("profile.tw=5");break;case"auv5":s.push("profile.tw=6");break;case"sk20":s.push("profile.tw=7");break;case"g8nd":s.push("profile.tw=8");break;case"75hp":s.push("profile.tw=9");break;case"4q7a":s.push("profile.tw=10");break;case"9sq1":s.push("profile.tw=11");break;case"644b":s.push("profile.tw=12");break;case"7jd7":s.push("profile.tw=13");break;case"10er":s.push("profile.tw=14");break;case"ujj8":s.push("profile.tw=15");break;case"9xmw":s.push("profile.tw=16");break;case"18q4":s.push("profile.tw=17");break;case"uo5f":s.push("profile.tw=19");break;case"jx52":s.push("profile.tw=20");break;case"nqk4":s.push("profile.tw=21");break;case"42ek":s.push("profile.tw=22");break;case"122w":s.push("profile.tw=23");break;case"y18b":s.push("profile.tw=24")}switch(o[0]){case"zo4h":s.push("profile.ab=1");break;case"pdk1":s.push("profile.ab=2");break;case"me6j":s.push("profile.ab=3");break;case"i6ap":s.push("profile.ab=4");break;case"j3mn":s.push("profile.ab=5");break;case"0e8t":s.push("profile.ab=6");break;case"nmv2":s.push("profile.ab=7");break;case"bac8":s.push("profile.ab=8");break;case"9rkj":s.push("profile.ab=9");break;case"gy9o":s.push("profile.ab=10");break;case"jpf0":s.push("profile.ab=11")}switch(o[1]){case"zy8v":s.push("profile.sx=1");break;case"25ql":s.push("profile.sx=2");break;case"n1c6":s.push("profile.sx=3")}switch(o[2]){case"277r":s.push("profile.tac=1");break;case"dw7o":s.push("profile.tac=2");break;case"7z6r":s.push("profile.tac=3");break;case"91di":s.push("profile.tac=4");break;case"uq21":s.push("profile.tac=5");break;case"l9tm":s.push("profile.tac=6")}switch(o[3]){case"yd4u":s.push("profile.tis=1");break;case"go4u":s.push("profile.tis=2");break;case"u9in":s.push("profile.tis=3");break;case"fmo3":s.push("profile.tis=4");break;case"f593":s.push("profile.tis=5");break;case"ueb9":s.push("profile.tis=6")}if(window.btoa){for(var i="",c=0;c<a.length;c++)c&&(i+=String.fromCharCode(Math.floor(26*Math.random())+65)),i+=a[c];i=window.btoa(i);var u=new Date;u.setDate(u.getDate()+90),document.cookie="hlVT="+i+";expires="+u.toUTCString()+";domain=.hl.co.uk;path=/;"}}if(e.form_action)switch(e.form_action.split("|")[0]){case"on-complete-monthly_lump":case"on-complete-monthly":case"on-complete-lump":s.push("profile.has_"+e.form_description.split("|")[1]+"=1"),s.push("opened_"+e.form_description.split("|")[1]+"=1"),s.push(e.form_description.split("|")[1]+"_step=3");break;case"on-person-1":case"on-person-2":s.push(e.form_description.split("|")[1]+"_step=2");break;case"on-waste-page":s.push(e.form_description.split("|")[1]+"_step=1")}if(e.form_action&&e.form_description&&!e.form_description.split("|")[0].toLowerCase().match(/(account-open|share deals|fund deals|top-ups|regular savings)/))switch(e.form_action){case"request-step1":s.push(e.form_description.split("|")[0].toLowerCase().replace(/\s+/g,"_")+"_"+e.form_description.split("|")[1].toLowerCase().replace(/-/g,"_").replace(/-/g,"_")+"_step=1");break;case"request-step2":s.push(e.form_description.split("|")[0].toLowerCase().replace(/\s+/g,"_")+"_"+e.form_description.split("|")[1].toLowerCase().replace(/\s+/g,"_").replace(/-/g,"_")+"_step=2");break;case"request-step3":s.push(e.form_description.split("|")[0].toLowerCase().replace(/\s+/g,"_")+"_"+e.form_description.split("|")[1].toLowerCase().replace(/\s+/g,"_").replace(/-/g,"_")+"_step=3");break;case"request-step4":s.push(e.form_description.split("|")[0].toLowerCase().replace(/\s+/g,"_")+"_"+e.form_description.split("|")[1].toLowerCase().replace(/\s+/g,"_").replace(/-/g,"_")+"_step=4");break;case"request-step5":s.push(e.form_description.split("|")[0].toLowerCase().replace(/\s+/g,"_")+"_"+e.form_description.split("|")[1].toLowerCase().replace(/\s+/g,"_").replace(/-/g,"_")+"_step=5");break;case"request-step6":s.push(e.form_description.split("|")[0].toLowerCase().replace(/\s+/g,"_")+"_"+e.form_description.split("|")[1].toLowerCase().replace(/\s+/g,"_").replace(/-/g,"_")+"_step=6");break;case"request-complete":s.push(e.form_description.split("|")[0].toLowerCase().replace(/\s+/g,"_")+"_"+e.form_description.split("|")[1].toLowerCase().replace(/\s+/g,"_").replace(/-/g,"_")+"_complete=1")}if(e.inv_action){var h=e.inv_action.split("|");e.form_description.split("|");switch(h[0].toLowerCase()){case"transfer":break;case"trade":if(e.trade_type)switch(e.trade_type){case"buy":s.push("tradeBuyCompleted_step=1");break;case"sell":s.push("tradeSellCompleted_step=1")}else s.push("tradeCompleted_step=1");break;case"mtopup":s.push("monthlyTopupComplete_step=1");break;case"lstopup":s.push("lumpTopupComplete_step=1")}}return null!==document.location.pathname.match(/^(\/investment-services\/isa)/)?s.push("profile.ProductI=22"):null!==document.location.pathname.match(/^(\/investment-services\/junior-isa)/)?s.push("profile.ProductI=26"):null!==document.location.pathname.match(/^(\/investment-services\/active-savings)/)?s.push("profile.ProductI=54"):null!==document.location.pathname.match(/^(\/investment-services\/fund-and-share-account)/)?s.push("profile.ProductI=98"):null!==document.location.pathname.match(/^(\/investment-services\/fund-and-share-account)/)?s.push("profile.ProductI=98"):null!==document.location.pathname.match(/^(\/pensions\/sipp)/)?s.push("profile.ProductI=70"):null!==document.location.pathname.match(/^(\/shares\/shares-search-results)/)?s.push("profile.tradeableI=S"):null!==document.location.pathname.match(/^(\/funds\/fund-discounts,-prices--and--factsheets)/)&&s.push("profile.tradbleI=F"),s}var globalTargetPageParamsToUpdate=globalTargetPageParams();if(1<globalTargetPageParamsToUpdate.length&&"undefined"!=typeof mboxDefine&&"undefined"!=typeof mboxUpdate){var global_mbox=document.createElement("div");global_mbox.id="mboxParams",document.body.appendChild(global_mbox),mboxDefine("mboxParams","mbox_profile_push"),mboxUpdate.apply(null,globalTargetPageParamsToUpdate)}
+});</script><script>
+var _sf_async_config=_sf_async_config||{uid:37194,domain:"hl.co.uk"};document.location.href.match("hl.co.uk/news/[0-9]")&&trackingobj.author&&(_sf_async_config={uid:37194,domain:"hl.co.uk",path:window.location.pathname,sections:"Newsroom",authors:trackingobj.author}),window._sf_endpt=(new Date).getTime();var e=document.createElement("script");e.setAttribute("language","javascript"),e.setAttribute("type","text/javascript"),e.setAttribute("src",("https:"==document.location.protocol?"https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/":"http://static.chartbeat.com/")+"js/chartbeat.js"),document.body.appendChild(e);
+</script><script language="javascript" src="https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/js/chartbeat.js" type="text/javascript"></script><script>_satellite["__runScript3"](function(event, target) {
+window.google_conversion_id=1010707160,window.google_remarketing_only=!0,_sdiToolkit.reactor.loadScript("//www.googleadservices.com/pagead/conversion_async.js").then(function(){"undefined"!=typeof window.google_trackConversion&&window.google_trackConversion()}),function(){function e(e){e=e.replace(/[\[]/,"\\[").replace(/[\]]/,"\\]");var t=new RegExp("[\\?&]"+e+"=([^&#]*)").exec(window.location.href);return null==t?"":t[1]}function t(e){var t=new Date;e?t.setDate(t.getDate()+30):t.setDate(t.getDate()-1),document.cookie="_impactRadius=1;expires="+t.toUTCString()+";domain=.hl.co.uk;path=/;"}e("theSource")&&(e("ir")?t(!0):t(!1))}(),function(){try{if(t=window,o=document,i="script",a="https://connect.facebook.net/en_US/fbevents.js",t.fbq||(n=t.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)},t._fbq||(t._fbq=n),(n.push=n).loaded=!0,n.version="2.0",n.queue=[],(r=o.createElement(i)).async=!0,r.src=a,(l=o.getElementsByTagName(i)[0]).parentNode.insertBefore(r,l)),fbq("init","480805658789302"),fbq("track","PageView"),window.JSON&&window.JSON.parse){var e=_satellite.readCookie("hl_ppc")?window.JSON.parse(_satellite.readCookie("hl_ppc")):{};!e.fb&&_satellite.readCookie("s_v32")&&("C"==_satellite.readCookie("s_v32")?fbq("trackCustom","ExistingClient"):fbq("trackCustom","ExistingLead"),e.fb=1,_satellite.setCookie("hl_ppc",window.JSON.stringify(e),365))}!window.logged_in&&typeof trackingobj!=undefined&&"request-complete"==trackingobj.form_action&&"P"==_satellite.readCookie("s_v20")&&"C"!=_satellite.readCookie("s_v32")&&_satellite.readCookie("theSource")&&_satellite.readCookie("theSource").match(/^(SXF)/i)?fbq("track","Lead"):_satellite.readCookie("s_v32")&&"C"!==_satellite.readCookie("s_v32")&&(null!==document.location.href.match(/isa/gi)&&null===document.location.href.match(/junior/gi)?fbq("trackCustom","ISALead"):null!==document.location.href.match(/(sipp|pension|retire|annuity|annuities|drawdown|ufpls)/gi)?fbq("trackCustom","SIPPLead"):null!==document.location.href.match(/(child|junior)/gi)?fbq("trackCustom","JuniorISALead"):null!==document.location.href.match(/(sell-off|investors|etf|investment-trust|ftse|bear|volatility|dividend|market|lloyds|trade|share)/gi)?fbq("trackCustom","ShareLead"):null!==document.location.href.match(/(fund|woodford|tracker|multi-manager|wealth-150)/gi)&&fbq("trackCustom","FundLead"))}catch(c){}var t,o,i,a,n,r,l}(),function(){try{t=window,o=document,i="script",t.twq||((a=t.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)}).version="1.1",a.queue=[],(n=o.createElement(i)).async=!0,n.src="//static.ads-twitter.com/uwt.js",(r=o.getElementsByTagName(i)[0]).parentNode.insertBefore(n,r)),twq("init","nucx9"),twq("track","PageView");var e=_satellite.readCookie("hl_ppc")?window.JSON.parse(_satellite.readCookie("hl_ppc")):{};e.twitter||"C"!=_satellite.readCookie("s_v32")?!e.twitter&&_satellite.readCookie("s_v32")&&_sdiToolkit.reactor.loadScript("//platform.twitter.com/oct.js").then(function(){twttr.conversion.trackPid("o2q01",{tw_sale_amount:0,tw_order_quantity:0}),e.twitter=1,_satellite.setCookie("hl_ppc",window.JSON.stringify(e),365)}):_sdiToolkit.reactor.loadScript("//platform.twitter.com/oct.js").then(function(){twttr.conversion.trackPid("o2q25",{tw_sale_amount:0,tw_order_quantity:0}),e.twitter=1,_satellite.setCookie("hl_ppc",window.JSON.stringify(e),365)})}catch(l){}var t,o,i,a,n,r}(),function(){try{if(window.JSON&&window.JSON.parse&&"C"==_satellite.readCookie("s_v32")){var e=_satellite.readCookie("hl_ppc")?window.JSON.parse(_satellite.readCookie("hl_ppc")):{};if(!e.ob)(new Image).src="//amplifypixel.outbrain.com/pixel?mid=00b812be44c7513d3d104d248d22c3ec17",e.ob=1,_satellite.setCookie("hl_ppc",window.JSON.stringify(e),365)}}catch(t){}}(),function(){try{if(window.JSON&&window.JSON.parse&&_satellite.readCookie("s_v32")){var e=_satellite.readCookie("hl_ppc")?window.JSON.parse(_satellite.readCookie("hl_ppc")):{};if(e.tb||"C"!=_satellite.readCookie("s_v32")){if(!e.tb){(new Image).src="//trc.taboola.com/hargreaveslansdown/log/3/mark?marking-type=HL_ExLdt&item-url="+encodeURIComponent(document.location.href)}}else(new Image).src="//trc.taboola.com/hargreaveslansdown/log/3/mark?marking-type=HL_ExCt&item-url="+encodeURIComponent(document.location.href);e.tb=1,_satellite.setCookie("hl_ppc",window.JSON.stringify(e),365)}}catch(t){}}(),function(t,e,o,i,a){var n,r,l;t[a]=t[a]||[],n=function(){var e={ti:"22013407"};e.q=t[a],t[a]=new UET(e),t[a].push("pageLoad")},(r=e.createElement(o)).src=i,r.async=1,r.onload=r.onreadystatechange=function(){var e=this.readyState;e&&"loaded"!==e&&"complete"!==e||(n(),r.onload=r.onreadystatechange=null)},(l=e.getElementsByTagName(o)[0]).parentNode.insertBefore(r,l)}(window,document,"script","//bat.bing.com/bat.js","uetq");
+});</script><div id="watchlists_modal" style="display: none;"><div id="watchlists_modal_bg" style="overflow-y: scroll; display: none;"></div><div id="watchlists_modal_container" style="max-width: 500px; display: none;"><div id="watchlists_modal_content"></div></div></div><div id="batBeacon768672830829" style="width:0px; height:0px; display:none; visibility:hidden;"><img alt="" height="0" id="batBeacon562883133131" src="https://bat.bing.com/action/0?ti=22013407&amp;Ver=2&amp;mid=2b00d87b-974b-4b5d-ac60-116fd44bec2c&amp;sid=18d07c9013e811eb9a3f832237b925d3&amp;vid=18d084b013e811eb975031e105866c10&amp;vids=0&amp;pi=1200101525&amp;lg=en-US&amp;sw=1280&amp;sh=720&amp;sc=24&amp;tl=Watchlists%20%7C%20Keep%20track%20of%20funds,%20shares%20and%20other%20investments&amp;p=https%3A%2F%2Fwww.hl.co.uk%2Fwatchlists&amp;r=https%3A%2F%2Fonline.hl.co.uk%2Fmy-accounts&amp;lt=2878&amp;evt=pageLoad&amp;msclkid=N&amp;sv=1&amp;rn=96830" style="width:0px; height:0px; display:none; visibility:hidden;" width="0"/></div><script src="https://analytics.twitter.com/i/adsct?type=javascript&amp;version=1.1.0&amp;p_id=Twitter&amp;p_user_id=0&amp;txn_id=nucx9&amp;events=%5B%5B%22pageview%22%2Cnull%5D%5D&amp;tw_sale_amount=0&amp;tw_order_quantity=0&amp;tw_iframe_status=0&amp;tpx_cb=twttr.conversion.loadPixels&amp;tw_document_href=https%3A%2F%2Fwww.hl.co.uk%2Fwatchlists" type="text/javascript"></script><script src="https://analytics.twitter.com/i/adsct?type=javascript&amp;version=1.1.0&amp;p_id=Twitter&amp;p_user_id=0&amp;txn_id=o2q25&amp;tw_sale_amount=0&amp;tw_order_quantity=0&amp;tw_iframe_status=0&amp;tpx_cb=twttr.conversion.loadPixels&amp;tw_document_href=https%3A%2F%2Fwww.hl.co.uk%2Fwatchlists" type="text/javascript"></script><script src="https://analytics.twitter.com/i/adsct?type=javascript&amp;version=1.1.0&amp;p_id=Twitter&amp;p_user_id=0&amp;txn_id=nucx9&amp;events=%5B%5B%22pageview%22%2Cnull%5D%5D&amp;tw_sale_amount=0&amp;tw_order_quantity=0&amp;tw_iframe_status=0&amp;tpx_cb=twttr.conversion.loadPixels&amp;tw_document_href=https%3A%2F%2Fwww.hl.co.uk%2Fwatchlists" type="text/javascript"></script></body></html>
